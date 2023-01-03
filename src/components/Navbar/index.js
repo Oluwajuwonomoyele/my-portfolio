@@ -1,18 +1,20 @@
-import { Nav, NavContainer, LogoContainer, Logo, LogoSpan, LinksContainer, NavLink } from "./Navbar.styles";
+import { Nav, NavContainer, LogoContainer, LogoImg, Logo, LogoSpan, LinksContainer, NavLink } from "./Navbar.styles";
+import logo from '../../assets/logo.png'
 
 const Navbar = () => {
     return ( 
         <Nav>
             <NavContainer>
                 <LogoContainer>
+                    <LogoImg src={logo} />
                     <Logo>JUWON <LogoSpan>OLUTOMISIN</LogoSpan>.</Logo>
                 </LogoContainer>
 
                 <LinksContainer>
                     <NavLink to='projects' activeClass="active">Projects</NavLink>
-                    <NavLink to='about'>About</NavLink>
-                    <NavLink to='resume'>Resume</NavLink>
-                    <NavLink to='contact-me'>Contact Me</NavLink>
+                    <NavLink to='about' activeClass="active">About</NavLink>
+                    <NavLink to='contact-me' activeClass="active">Contact Me</NavLink>
+                    <NavLink to='resume' activeClass="active">Resume</NavLink>
                 </LinksContainer>
 
             </NavContainer>

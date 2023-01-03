@@ -1,11 +1,13 @@
 import { BrowserRouter as Router } from "react-router-dom";
 import Navbar from "./components/Navbar";
 import { ThemeProvider } from "styled-components";
+import Hero from "./components/Hero";
 
 function App() {
   const theme = {
     colors: {
       primary: '#ffc5ad',
+      primary2: '#fb9a69',
       secondary: '#2d2c2c',
       white: '#e8e8e8'
     }
@@ -15,6 +17,7 @@ function App() {
     <Router>
       <ThemeProvider theme={theme}>
         <Navbar />
+        <Hero />
       </ThemeProvider>
     </Router>
   );
