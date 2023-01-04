@@ -15,7 +15,8 @@ const ProjectData = [
         githubLink: 'https://github.com/Oluwajuwonomoyele/blogr',
         externalLink: 'https://oo-blogr.vercel.app/',
         langs: ['ReactJS', 'TailwindCSS'],
-        img: blogr
+        img: blogr,
+        imgStart: true
     },
     {
         id: 2,
@@ -24,7 +25,8 @@ const ProjectData = [
         githubLink: 'https://github.com/Oluwajuwonomoyele/todo-app',
         externalLink: 'https://oluwajuwonomoyele-todo-app.netlify.app/',
         langs: ['HTML', 'CSS', 'Javascript'],
-        img: todo
+        img: todo,
+        imgStart: false
     },
     {
         id: 3,
@@ -33,7 +35,8 @@ const ProjectData = [
         githubLink: 'https://github.com/Oluwajuwonomoyele/peculiarhomes',
         externalLink: 'https://oo-peculiarhomes.vercel.app/',
         langs: ['ReactJS', 'TailwindCSS'],
-        img: peculiarhomes
+        img: peculiarhomes,
+        imgStart: true
     },
     {
         id: 4,
@@ -42,7 +45,8 @@ const ProjectData = [
         githubLink: 'https://github.com/Oluwajuwonomoyele/peculiar-financial-tracker',
         externalLink: 'https://github.com/Oluwajuwonomoyele/peculiar-financial-tracker',
         langs: ['ReactJS', "TailwindCSS", 'Firebase'],
-        img: ft
+        img: ft,
+        imgStart: false
     },
     {
         id: 5,
@@ -51,7 +55,8 @@ const ProjectData = [
         githubLink: 'https://github.com/Oluwajuwonomoyele/bookmark',
         externalLink: 'https://oluwajuwonomoyele.github.io/bookmark/',
         langs: ['ReactJS', 'TailwindCSS'],
-        img: bookmark
+        img: bookmark,
+        imgStart: true
     },
     {
         id: 6,
@@ -60,7 +65,8 @@ const ProjectData = [
         githubLink: 'https://github.com/Oluwajuwonomoyele/shortly',
         externalLink: 'https://oo-shortly.vercel.app/',
         langs: ['ReactJS', 'TailwindCSS', 'Firebase'],
-        img: shortly
+        img: shortly,
+        imgStart: false
     },
     {
         id: 7,
@@ -69,6 +75,7 @@ const ProjectData = [
         githubLink: 'https://github.com/Oluwajuwonomoyele/advice-generator-app',
         externalLink: 'https://oo-advice-generator-app.vercel.app/',
         langs: ['ReactJS', 'TailwindCSS', 'API'],
-        img: AGA
+        img: AGA,
+        imgStart: true
     },
 ]
