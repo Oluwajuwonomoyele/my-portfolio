@@ -2,6 +2,7 @@ import { BrowserRouter as Router } from "react-router-dom";
 import Navbar from "./components/Navbar";
 import { ThemeProvider } from "styled-components";
 import Hero from "./components/Hero";
+import Projects from "./components/Projects";
 
 function App() {
   const theme = {
@@ -18,6 +19,7 @@ function App() {
       <ThemeProvider theme={theme}>
         <Navbar />
         <Hero />
+        <Projects />
       </ThemeProvider>
     </Router>
   );

@@ -12,7 +12,7 @@ const Navbar = () => {
 
                 <LinksContainer>
                     <NavLink to='projects' activeClass="active">Projects</NavLink>
-                    <NavLink to='about' activeClass="active">About</NavLink>
+                    <NavLink to='about' activeClass="active">About Me</NavLink>
                     <NavLink to='contact-me' activeClass="active">Contact Me</NavLink>
                     <NavLink to='resume' activeClass="active">Resume</NavLink>
                 </LinksContainer>

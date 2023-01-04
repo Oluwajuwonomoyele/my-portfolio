@@ -40,3 +40,50 @@ export const HeroText2 = styled.p`
         color: ${props => props.theme.colors.primary};
     }
 `
+export const ContactsContainer = styled.div`
+    position: fixed;
+    margin-left: 8rem;
+    bottom: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+`
+export const ContactsContainer2 = styled.div`
+    position: fixed;
+    right: 0;
+    margin-right: 7rem;
+    bottom: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+`
+export const Contacts = styled.div`
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    font-size: 1.5rem;
+
+    a {
+        cursor: pointer;
+        color: ${props => props.theme.colors.primary};
+        transition: all 0.3s ease-out;
+    }
+    a:hover {
+        transform: translateY(-4px);
+        color: ${props => props.theme.colors.primary2};
+    }
+    p {
+        text-orientation: mixed;
+        writing-mode: vertical-rl;
+        font-size: 1rem;
+        cursor: default;
+        color: ${props => props.theme.colors.primary};
+    }
+`
+export const Line = styled.div`
+    width: 2px;
+    height: 100px;
+    background-color: ${props => props.theme.colors.primary};
+`
