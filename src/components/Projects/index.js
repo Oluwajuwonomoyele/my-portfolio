@@ -1,5 +1,6 @@
 import { ProjectsSection, ProjectsContainer, ProjectsHeader, ProjectDesigns} from './Projects.styles';
 import ProjectDesign from '../ProjectDesign';
+import ProjectData from '../../ProjectsData';
 
 const Projects = () => {
     return (  
@@ -14,7 +15,10 @@ const Projects = () => {
                 </ProjectsHeader>
 
                 <ProjectDesigns>
-                    <ProjectDesign />
+                    {ProjectData.map(project => {
+                        return (
+                        <ProjectDesign project={project} key={project.id}/>
+                    )})}
                 </ProjectDesigns>
 
             </ProjectsContainer>

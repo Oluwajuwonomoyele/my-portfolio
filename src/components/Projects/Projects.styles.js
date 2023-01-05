@@ -29,4 +29,7 @@ export const ProjectsHeader = styled.div`
     }
 `
 export const ProjectDesigns = styled.div`
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
 `

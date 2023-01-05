@@ -4,7 +4,7 @@ export const ProjectDesignSection = styled.div`
     padding: 4rem;
     display: grid;
     grid-template-columns: repeat(12, 1fr);
-    align-items: stretch;
+    align-items: center;
 `
 export const ImgDiv = styled.div`
     position: relative;

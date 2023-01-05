@@ -1,26 +1,28 @@
 import { ProjectDesignSection, ImgDiv, ContentDiv, Desc, LLDiv, Lang, Links } from './Design.styles';
 import { FiGithub, FiExternalLink } from 'react-icons/fi'
-import todo from '../../assets/Todo app.png'
 
-const ProjectDesign = () => {
+const ProjectDesign = ({project}) => {
     return (  
         <ProjectDesignSection>
-            <ImgDiv imgStart={false}>
-                <img src={todo} />
+            <ImgDiv imgStart={project.imgStart}>
+                <img src={project.img} />
             </ImgDiv>
-            <ContentDiv imgStart={false}>
+            <ContentDiv imgStart={project.imgStart}>
                 <div>
                     <h1>Featured Project</h1>
-                    <h2>Crazy Project</h2>
+                    <h2>{project.projectName}</h2>
                 </div>
-                <Desc>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nostrum impedit omnis nemo laborum minima repellat adipisci illo quos dolorem pariatur. Rerum possimus sapiente odio, voluptatem repellat repellendus dolorem harum quas. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sint, natus.</Desc>
+                <Desc>{project.description}</Desc>
                 <LLDiv>
-                    <Lang imgStart={false}><p>ReactJS</p> <p>CSS</p> <p>Firebase</p></Lang>
-                    <Links imgStart={false}>
-                        <a href="#">
+                    <Lang imgStart={project.imgStart}>{project.langs.map(lang => {
+                        return (
+                            <p>{lang}</p>
+                        )})}</Lang>
+                    <Links imgStart={project.imgStart}>
+                        <a href={project.githubLink} target='_blank'>
                             <FiGithub />
                         </a>
-                        <a href="#">
+                        <a href={project.externalLink} target='_blank'>
                             <FiExternalLink />
                         </a>
                     </Links>
