@@ -45,19 +45,19 @@ export const ContentDiv = styled.div`
 
     h1 {
         font-size: 1rem;
-        color: ${props => props.theme.colors.primary};
+        color: ${props => props.theme.colors.white};
     }
     h2 {
         font-size: 2rem;
         line-height: 2rem;
-        color: ${props => props.theme.colors.primary2};
+        color: ${props => props.theme.colors.primary};
     }
 `
 export const Desc = styled.div`
     padding: 1rem;
     border-radius: 4px;
     background-color: ${props => props.theme.colors.secondary};;
-    color: ${props => props.theme.colors.primary2};
+    color: ${props => props.theme.colors.primary};
     font-size: 1.1rem;
     font-weight: bold;
     box-shadow: 0 2px 5px ${props => props.theme.colors.primary2};

@@ -18,13 +18,13 @@ const Hero = () => {
             </HeroContainer>
             <ContactsContainer>
                 <Contacts>
-                    <a href="#">
+                    <a href="https://github.com/oluwajuwonomoyele">
                         <FiGithub />
                     </a>
-                    <a href="#">
+                    <a href="https://twitter.com/OlutomisinJuwon">
                         <FiTwitter />
                     </a>
-                    <a href="#">
+                    <a href="https://www.linkedin.com/in/oluwajuwon-olutomisin/">
                         <FiLinkedin />
                     </a>
 
@@ -33,7 +33,7 @@ const Hero = () => {
             </ContactsContainer>
             <ContactsContainer2>
                 <Contacts>
-                    <a href="#">
+                    <a href="mailto:jolutomisin@gmail.com">
                         <FiMail />
                     </a>
                     <p>jolutomisin@gmail.com</p>

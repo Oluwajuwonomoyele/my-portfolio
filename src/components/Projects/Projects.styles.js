@@ -19,7 +19,7 @@ export const ProjectsHeader = styled.div`
         font-size: 7rem;
         letter-spacing: 3px;
         line-height: 7rem;
-        color: ${props => props.theme.colors.primary2};
+        color: ${props => props.theme.colors.primary};
         opacity: 0.5;
     }
     div:nth-last-child(1) {
