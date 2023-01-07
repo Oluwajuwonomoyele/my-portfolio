@@ -1,4 +1,5 @@
 import { AboutSection, AboutContainer, AboutHeader, AboutContent } from './About.styles';
+import aboutPic from '../../assets/about me.svg';
 
 const About = () => {
     return (  
@@ -12,6 +13,10 @@ const About = () => {
                     <div></div>
                 </AboutHeader>
                 <AboutContent>
+                    <p>Hello again! Thanks for scrolling this far!! Yes as you already know I am a frontend web developer, I started my coding journey about a year and a quarter ago and I'm grateful for how far I've come and enthusiastic about the future. 
+                    Other than coding, I am currently a student of the University of Lagos, Nigeria majoring in Bachelor of Science in Mathematics. I enjoy lots of music and movies, also feel free to reach out to me with book recommendations (doesn't necessarily have to be about coding).
+                    </p>
+                    <img src={aboutPic} alt="about me" />
 
                 </AboutContent>
             </AboutContainer>

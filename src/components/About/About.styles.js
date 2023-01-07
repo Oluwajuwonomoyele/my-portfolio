@@ -33,4 +33,18 @@ export const AboutHeader = styled.div`
 `
 export const AboutContent = styled.div`
     padding: 4rem;
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    align-items: center;
+    gap: 3rem;
+
+    p {
+        font-size: 1.5rem;
+        color: ${props => props.theme.colors.white};
+        line-height: 3rem;
+    }
+
+    img {
+        width: 25rem;
+    }
 `
