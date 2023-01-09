@@ -54,7 +54,7 @@ export const ContactContent = styled.div`
         color: ${props => props.theme.colors.primary};
     }
     p {
-        font-size: 1.5rem;
+        font-size: 1.3rem;
         line-height: 3rem;
         color: ${props => props.theme.colors.white};
     }
@@ -89,4 +89,11 @@ export const ContactContent = styled.div`
             width: 100%;
         }
     }
+`
+export const Acknowlodgment = styled.p`
+    text-align: center;
+    font-weight: bold;
+    color: ${props => props.theme.colors.primary2};
+    padding-bottom: 1rem;
+
 `

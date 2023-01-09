@@ -41,6 +41,10 @@ export const LinksContainer = styled.div`
     display: flex;
     gap: 4rem;  
     align-items: center;
+
+    @media screen and (max-width: 768px) {
+        display: none;
+    }
 `
 export const NavLink = styled(Link)`
     color: ${props => props.theme.colors.white};
@@ -85,4 +89,7 @@ export const NavLink = styled(Link)`
         background-color: ${props => props.theme.colors.primary};
         color: ${props => props.theme.colors.secondary};
     }
+`
+export const MenuBar = styled.div`
+
 `

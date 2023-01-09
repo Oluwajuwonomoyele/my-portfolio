@@ -30,6 +30,7 @@ export const HeroHeader = styled.h1`
 `
 export const HeroText = styled.p`
     font-size: 1.2rem;
+    line-height: 2rem;
     color: ${props => props.theme.colors.white};
 `
 export const HeroText2 = styled.p`
@@ -38,6 +39,8 @@ export const HeroText2 = styled.p`
 
     a {
         color: ${props => props.theme.colors.primary};
+        font-family: 'Nunito Sans', sans-serif;
+        font-weight: bold;
     }
 `
 export const ContactsContainer = styled.div`

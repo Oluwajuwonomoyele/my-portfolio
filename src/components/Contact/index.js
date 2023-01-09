@@ -1,4 +1,4 @@
-import { ContactSection, ContactContainer, ContactHeader, ContactContent } from "./Contact.styles";
+import { ContactSection, ContactContainer, ContactHeader, ContactContent, Acknowlodgment } from "./Contact.styles";
 import { MdDoubleArrow } from 'react-icons/md'
 
 const Contact = () => {
@@ -20,12 +20,14 @@ const Contact = () => {
                         <p>Interested in working together? Or you have frontend related questions, feel free to hit me up and I'll get back to you as soon as I can. I'm currently AVAILABLE for any frontend projects.</p>
                     </div>
                     <div>
-                        <a href="#"><span>Hit Me Up</span> <MdDoubleArrow /></a>
+                        <a href="mailto:jolutomisin@yahoo.com"><span>Hit Me Up</span> <MdDoubleArrow /></a>
                     </div>
 
                 </ContactContent>
-
             </ContactContainer>
+            <Acknowlodgment>
+                Designed and Built by Juwon Olutomisin
+            </Acknowlodgment>
         </ContactSection>
     );
 }

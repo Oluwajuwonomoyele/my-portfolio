@@ -1,4 +1,4 @@
-import { Nav, NavContainer, LogoContainer, LogoImg, Logo, LogoSpan, LinksContainer, NavLink } from "./Navbar.styles";
+import { Nav, NavContainer, LogoContainer, LogoImg, Logo, LogoSpan, LinksContainer, NavLink, MenuBar } from "./Navbar.styles";
 import logo from '../../assets/logo.png'
 
 const Navbar = () => {
@@ -16,6 +16,12 @@ const Navbar = () => {
                     <NavLink to='contact-me' activeClass="active">Contact Me</NavLink>
                     <NavLink to='resume' activeClass="active">Resume</NavLink>
                 </LinksContainer>
+
+                <MenuBar>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </MenuBar>
 
             </NavContainer>
         </Nav>

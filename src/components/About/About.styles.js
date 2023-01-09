@@ -39,7 +39,7 @@ export const AboutContent = styled.div`
     gap: 3rem;
 
     p {
-        font-size: 1.5rem;
+        font-size: 1.3rem;
         color: ${props => props.theme.colors.white};
         line-height: 3rem;
     }
