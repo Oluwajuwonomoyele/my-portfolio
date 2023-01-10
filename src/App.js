@@ -6,6 +6,7 @@ import Projects from "./components/Projects";
 import Skills from "./components/Skills";
 import About from "./components/About";
 import Contact from "./components/Contact";
+import { useState } from "react";
 
 function App() {
   const theme = {
@@ -17,10 +18,12 @@ function App() {
     }
   }
 
+  const [openNav,setOpenNav] = useState(false)
+
   return (
     <Router>
       <ThemeProvider theme={theme}>
-        <Navbar />
+        <Navbar openNav={openNav} setOpenNav={setOpenNav} />
         <Hero />
         <Projects />
         <Skills />

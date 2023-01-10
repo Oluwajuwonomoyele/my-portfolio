@@ -5,6 +5,10 @@ export const HeroSection = styled.section`
     display: flex;
     align-items: center;
 
+    @media screen and (max-width: 768px) {
+        height: auto;
+    }
+
 `
 export const HeroContainer = styled.div`
     max-width: 1500px;
@@ -13,8 +17,18 @@ export const HeroContainer = styled.div`
     display: flex;
     align-items: center;
     gap: 4rem;
+
+    @media screen and (max-width: 768px) {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 4rem;
+    }
 `
 export const HeroImgContainer = styled.div`
+     @media screen and (max-width: 768px) {
+        display: none;
+    }
+
 `
 export const HeroImg = styled.img`
     max-width: 550px;
@@ -51,6 +65,10 @@ export const ContactsContainer = styled.div`
     flex-direction: column;
     align-items: center;
     gap: 1rem;
+
+    @media screen and (max-width: 768px) {
+        display: none;
+    }
 `
 export const ContactsContainer2 = styled.div`
     position: fixed;
@@ -61,6 +79,10 @@ export const ContactsContainer2 = styled.div`
     flex-direction: column;
     align-items: center;
     gap: 1rem;
+
+    @media screen and (max-width: 768px) {
+        display: none;
+    }
 `
 export const Contacts = styled.div`
     display: flex;

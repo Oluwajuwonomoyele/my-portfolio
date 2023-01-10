@@ -1,7 +1,7 @@
-import { Nav, NavContainer, LogoContainer, LogoImg, Logo, LogoSpan, LinksContainer, NavLink, MenuBar } from "./Navbar.styles";
+import { Nav, NavContainer, LogoContainer, LogoImg, Logo, LogoSpan, LinksContainer, NavLink, MenuBar, MobileNav, MobileNavLink } from "./Navbar.styles";
 import logo from '../../assets/logo.png'
 
-const Navbar = () => {
+const Navbar = ({openNav, setOpenNav}) => {
     return ( 
         <Nav>
             <NavContainer>
@@ -17,12 +17,19 @@ const Navbar = () => {
                     <NavLink to='resume' activeClass="active">Resume</NavLink>
                 </LinksContainer>
 
-                <MenuBar>
+                <MenuBar onClick={() => setOpenNav(!openNav)} openNav={openNav}>
                     <div></div>
                     <div></div>
                     <div></div>
                 </MenuBar>
-
+                <MobileNav openNav={openNav}>
+                    <div>
+                        <MobileNavLink to='projects' activeClass="active">Projects</MobileNavLink>
+                        <MobileNavLink to='about' activeClass="active">About Me</MobileNavLink>
+                        <MobileNavLink to='contact-me' activeClass="active">Contact Me</MobileNavLink>
+                        <MobileNavLink to='resume' activeClass="active">Resume</MobileNavLink>
+                    </div>
+                </MobileNav>
             </NavContainer>
         </Nav>
     );

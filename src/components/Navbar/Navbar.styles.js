@@ -6,6 +6,8 @@ export const Nav = styled.nav`
      height: 100px;
      display: flex;
      align-items: center;
+     position: relative;
+     z-index: 555;
      
 `
 export const NavContainer = styled.div`
@@ -91,5 +93,94 @@ export const NavLink = styled(Link)`
     }
 `
 export const MenuBar = styled.div`
+    cursor: pointer;
+    transition: transform 0.1s ease-out;
+    position: relative;
+    z-index: 999;
+    transform: ${({openNav}) => openNav ? 'rotate(360deg)' : 'rotate(0deg)'};
 
+    @media screen and (min-width: 790px) {
+        display: none;
+    }
+
+    div {
+        height: 4px;
+        background-color: ${props => props.theme.colors.primary};
+        margin-bottom: 0.5rem;
+        transition: all 0.3s ease-out;
+        border-radius: 3px;
+
+
+        &:nth-child(1){
+            width: 2.4rem;
+            transform: ${({openNav}) => openNav ? 'translateY(10px) rotate(43deg)' : ''};
+        }
+
+        &:nth-child(2){
+            width: 1.8rem;
+            opacity: ${({openNav}) => openNav ? '0' : '1'}
+        }
+
+        &:nth-child(3){
+            width: ${({openNav}) => openNav ? '2.4rem' : '1.2rem'};
+            transform: ${({openNav}) => openNav ? 'translateY(-14px) rotate(-43deg)' : ''}
+        }
+    }
+`
+export const MobileNav = styled.div`
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 100vh;
+    z-index: ${({openNav}) => openNav ? '100' : '0'};
+    opacity: ${({openNav}) => openNav ? '1' : '0'};
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: right;
+    background-color: ${props => props.theme.colors.primary2};
+    transition: all 0.3s ease-out;
+
+    &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: -0.5rem;
+        bottom: 0;
+        background-color: ${props => props.theme.colors.secondary};
+        transform-origin: 0 0;
+        transform: ${({openNav}) => openNav ? 'skew(-14deg) translateX(0)' : 'skew(-14deg) translateX(-120%)'};
+        transition: all 0.3s;
+    }
+
+    div {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+        transform: ${({openNav}) => openNav ? 'translateX(0) skew(-14deg)' : 'translateX(8rem) skew(-14deg)'};
+        opacity: ${({openNav}) => openNav ? '1' : '0'};
+        transition: all 0.2s ease-out;
+        transition-delay: 0.5s;
+    }
+`
+
+export const MobileNavLink = styled(Link)`
+    position: relative;
+    z-index: 200;
+    color: ${props => props.theme.colors.primary};
+    font-size: 2.5rem;
+    font-weight: bold;
+    opacity: ${({openNav}) => openNav ? '0' : '1'};
+    transition: all 0.2s ease-out;
+
+    :nth-last-child(1){
+        border: 3px solid ${props => props.theme.colors.primary};
+        padding: 0.5rem 1rem;
+        text-align: center;
+        border-radius: 4px;
+        transition-delay: 0.375s;
+    }
 `
