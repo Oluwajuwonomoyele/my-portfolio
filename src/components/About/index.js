@@ -3,7 +3,7 @@ import aboutPic from '../../assets/about me.svg';
 
 const About = () => {
     return (  
-        <AboutSection>
+        <AboutSection name='about'>
             <AboutContainer>
                 <AboutHeader>
                     <div>

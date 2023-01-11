@@ -3,7 +3,7 @@ import { MdDoubleArrow } from 'react-icons/md'
 
 const Contact = () => {
     return (  
-        <ContactSection>
+        <ContactSection name='contact'>
             <ContactContainer>
                 <ContactHeader>
                     <div>

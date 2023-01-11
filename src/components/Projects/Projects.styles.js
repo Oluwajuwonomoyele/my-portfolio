@@ -6,6 +6,10 @@ export const ProjectsContainer = styled.div`
     max-width: 1500px;
     margin: 0 auto;
     padding: 4rem 10rem;  
+
+    @media screen and (max-width: 768px) {
+        padding: 4rem;
+    }
 `
 export const ProjectsHeader = styled.div`
     display: flex;
@@ -14,6 +18,10 @@ export const ProjectsHeader = styled.div`
     h1 {
             font-size: 2rem;
             color: ${props => props.theme.colors.white};
+
+            @media screen and (max-width: 768px) {
+                font-size: 1.5rem;
+            }
         }
     h2 {
         font-size: 7rem;
@@ -26,6 +34,7 @@ export const ProjectsHeader = styled.div`
         background-color: ${props => props.theme.colors.white};
         height: 1px;
         width: 400px;
+        border-radius: 4px;
     }
 `
 export const ProjectDesigns = styled.div`

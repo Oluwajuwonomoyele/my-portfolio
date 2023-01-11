@@ -7,26 +7,42 @@ export const SkillsContainer = styled.div`
     max-width: 1500px;
     margin: 0 auto;
     padding: 4rem 10rem; 
+
+    @media screen and (max-width: 768px) {
+        padding: 4rem;
+    }
 `
 export const SkillsHeader = styled.div`
     display: flex;
     align-items: center;
 
+    @media screen and (max-width: 768px) {
+        align-items: flex-start;
+    }
+
     h1 {
             font-size: 2rem;
             color: ${props => props.theme.colors.white};
+
+            @media screen and (max-width: 768px) {
+                font-size: 1.5rem;
+            }
         }
     h2 {
         font-size: 7rem;
         letter-spacing: 3px;
         line-height: 7rem;
         color: ${props => props.theme.colors.primary};
-        opacity: 0.5;
+        opacity: 0.3;
     }
     div:nth-last-child(1) {
         background-color: ${props => props.theme.colors.white};
         height: 1px;
         width: 400px;
+
+        @media screen and (max-width: 768px) {
+            display: none;
+        }
     }
 
 `

@@ -137,8 +137,10 @@ export const MobileNav = styled.div`
     z-index: ${({openNav}) => openNav ? '100' : '0'};
     opacity: ${({openNav}) => openNav ? '1' : '0'};
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
+    gap: 2rem;
     text-align: right;
     background-color: ${props => props.theme.colors.primary2};
     transition: all 0.3s ease-out;
@@ -153,17 +155,38 @@ export const MobileNav = styled.div`
         background-color: ${props => props.theme.colors.secondary};
         transform-origin: 0 0;
         transform: ${({openNav}) => openNav ? 'skew(-14deg) translateX(0)' : 'skew(-14deg) translateX(-120%)'};
-        transition: all 0.3s;
+        transition: all 0.2s ease-out;
     }
 
-    div {
-        display: flex;
-        flex-direction: column;
-        gap: 2rem;
-        transform: ${({openNav}) => openNav ? 'translateX(0) skew(-14deg)' : 'translateX(8rem) skew(-14deg)'};
+    a:nth-of-type(1){
+        transform: ${({openNav}) => openNav ? 'translateX(2rem);' : 'translateX(10rem);'};
         opacity: ${({openNav}) => openNav ? '1' : '0'};
-        transition: all 0.2s ease-out;
+        transition-delay: 0.4s;
+    }
+    a:nth-of-type(2){
+        transform: ${({openNav}) => openNav ? 'translateX(-2rem);' : 'translateX(-10rem);'};
+        transition-delay: 0.45s;
+        opacity: ${({openNav}) => openNav ? '1' : '0'};
+    }
+    a:nth-of-type(3){
+        transform: ${({openNav}) => openNav ? 'translateX(2rem);' : 'translateX(10rem);'};
         transition-delay: 0.5s;
+        opacity: ${({openNav}) => openNav ? '1' : '0'};
+    }
+    a:nth-of-type(4){
+        transform: ${({openNav}) => openNav ? 'translateX(-2rem);' : 'translateX(-10rem);'};
+        border: 3px solid ${props => props.theme.colors.primary};
+        opacity: ${({openNav}) => openNav ? '1' : '0'};
+        padding: 0.5rem 1rem;
+        text-align: center;
+        border-radius: 4px;
+        transition-delay: 0.55s;
+
+        &:hover {
+            background-color: ${props => props.theme.colors.primary};
+            color: ${props => props.theme.colors.secondary};
+        }
+
     }
 `
 
@@ -173,14 +196,5 @@ export const MobileNavLink = styled(Link)`
     color: ${props => props.theme.colors.primary};
     font-size: 2.5rem;
     font-weight: bold;
-    opacity: ${({openNav}) => openNav ? '0' : '1'};
     transition: all 0.2s ease-out;
-
-    :nth-last-child(1){
-        border: 3px solid ${props => props.theme.colors.primary};
-        padding: 0.5rem 1rem;
-        text-align: center;
-        border-radius: 4px;
-        transition-delay: 0.375s;
-    }
 `

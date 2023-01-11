@@ -4,7 +4,7 @@ import ProjectData from '../../ProjectsData';
 
 const Projects = () => {
     return (  
-        <ProjectsSection>
+        <ProjectsSection name='projects'>
             <ProjectsContainer>
                 <ProjectsHeader>
                     <div>

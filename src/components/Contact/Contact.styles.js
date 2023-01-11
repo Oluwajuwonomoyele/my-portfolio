@@ -7,6 +7,10 @@ export const ContactContainer = styled.div`
     max-width: 1500px;
     margin: 0 auto;
     padding: 4rem 10rem; 
+
+    @media screen and (max-width: 768px) {
+        padding: 4rem;
+    }
 `
 export const ContactHeader = styled.div`
     display: flex;
@@ -21,12 +25,16 @@ export const ContactHeader = styled.div`
         letter-spacing: 3px;
         line-height: 7rem;
         color: ${props => props.theme.colors.primary};
-        opacity: 0.5;
+        opacity: 0.3;
     }
     div:nth-last-child(1) {
         background-color: ${props => props.theme.colors.white};
         height: 1px;
         width: 400px;
+
+        @media screen and (max-width: 768px) {
+            display: none;
+        }
     }
 `
 
@@ -39,6 +47,13 @@ export const ContactContent = styled.div`
     display: grid;
     grid-template-columns: repeat(12, 1fr);
 
+    @media screen and (max-width: 768px) {
+        display: flex;
+        flex-direction: column;
+        gap: 3rem;
+        padding: 2.5rem;
+    }
+
     div:nth-child(1) {
         grid-area: 1 / 1 / 2 / 8;
     }
@@ -46,6 +61,11 @@ export const ContactContent = styled.div`
         grid-area: 1 / 8 / 2 / 13;
         align-self: flex-end;
         justify-self: end;
+
+        @media screen and (max-width: 768px) {
+            align-self: flex-start;
+            justify-self: auto;
+        }
     }
 
     h1 {
@@ -68,6 +88,10 @@ export const ContactContent = styled.div`
         display: flex;
         align-items: center;
         gap: 0.5rem;
+
+        @media screen and (max-width: 768px) {
+            display: inline-flex;
+        }
 
         span {
             font-size: 1rem;

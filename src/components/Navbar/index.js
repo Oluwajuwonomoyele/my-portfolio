@@ -23,12 +23,10 @@ const Navbar = ({openNav, setOpenNav}) => {
                     <div></div>
                 </MenuBar>
                 <MobileNav openNav={openNav}>
-                    <div>
-                        <MobileNavLink to='projects' activeClass="active">Projects</MobileNavLink>
-                        <MobileNavLink to='about' activeClass="active">About Me</MobileNavLink>
-                        <MobileNavLink to='contact-me' activeClass="active">Contact Me</MobileNavLink>
-                        <MobileNavLink to='resume' activeClass="active">Resume</MobileNavLink>
-                    </div>
+                    <MobileNavLink to='projects' smooth={true} spy={true} duration={500} activeClass="active">Projects</MobileNavLink>
+                    <MobileNavLink to='about' smooth={true} spy={true} duration={500} activeClass="active">About Me</MobileNavLink>
+                    <MobileNavLink to='contact' smooth={true} spy={true} duration={500} activeClass="active">Contact Me</MobileNavLink>
+                    <MobileNavLink to='resume' activeClass="active">Resume</MobileNavLink>
                 </MobileNav>
             </NavContainer>
         </Nav>

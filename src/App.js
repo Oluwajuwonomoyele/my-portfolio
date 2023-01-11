@@ -26,8 +26,8 @@ function App() {
         <Navbar openNav={openNav} setOpenNav={setOpenNav} />
         <Hero />
         <Projects />
-        <Skills />
         <About />
+        <Skills />
         <Contact />
       </ThemeProvider>
     </Router>

@@ -46,6 +46,10 @@ export const HeroText = styled.p`
     font-size: 1.2rem;
     line-height: 2rem;
     color: ${props => props.theme.colors.white};
+
+    @media screen and (max-width: 768px) {
+        line-height: 2.5rem;
+    }
 `
 export const HeroText2 = styled.p`
     font-size: 1.2rem;
