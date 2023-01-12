@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import { Link } from "react-scroll";
+import navbg from '../../assets/navbg.gif';
 
 export const Nav = styled.nav`
      background-color: transparent;
@@ -128,13 +129,13 @@ export const MenuBar = styled.div`
     }
 `
 export const MobileNav = styled.div`
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
     right: 0;
     bottom: 0;
     height: 100vh;
-    z-index: ${({openNav}) => openNav ? '100' : '0'};
+    z-index: 999;
     opacity: ${({openNav}) => openNav ? '1' : '0'};
     display: flex;
     flex-direction: column;
@@ -142,8 +143,12 @@ export const MobileNav = styled.div`
     justify-content: center;
     gap: 2rem;
     text-align: right;
-    background-color: ${props => props.theme.colors.primary2};
+    background: ${props => props.theme.colors.primary2};
     transition: all 0.3s ease-out;
+
+    @media screen and (min-width: 790px) {
+        display: none;
+    }
 
     &::before {
         content: '';
@@ -155,8 +160,19 @@ export const MobileNav = styled.div`
         background-color: ${props => props.theme.colors.secondary};
         transform-origin: 0 0;
         transform: ${({openNav}) => openNav ? 'skew(-14deg) translateX(0)' : 'skew(-14deg) translateX(-120%)'};
-        transition: all 0.2s ease-out;
+        transition: all 0.3s ease-out;
     }
+    &::after {
+        content: '';
+        display: block;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background-image: url(${navbg});
+        opacity: 0.4;
+    }
+
+
 
     a:nth-of-type(1){
         transform: ${({openNav}) => openNav ? 'translateX(2rem);' : 'translateX(10rem);'};
