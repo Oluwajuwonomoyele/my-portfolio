@@ -5,6 +5,10 @@ export const ProjectDesignSection = styled.div`
     display: grid;
     grid-template-columns: repeat(12, 1fr);
     align-items: center;
+
+    @media screen and (max-width: 768px) {
+       padding: 4rem 0;
+    }
 `
 export const ImgDiv = styled.div`
     position: relative;
@@ -13,6 +17,16 @@ export const ImgDiv = styled.div`
     overflow: hidden;
     grid-area: ${({imgStart}) => imgStart ? '1 / 1 / -1 / 8' : '1 / 6 / -1 / 13'};
     z-index: 3;
+
+    @media screen and (max-width: 768px) {
+       grid-column: 1 / -1;
+       height: 28rem;
+
+       img {
+            height: 100%;
+            object-fit: cover;
+       }
+    }
 
     &::after {
         content: '';
@@ -25,6 +39,11 @@ export const ImgDiv = styled.div`
         transition: all 0.4s ease-out;
         border-radius: 5px;
         overflow: hidden;
+
+        @media screen and (max-width: 768px) {
+            opacity: 0.9;
+            background-color: ${props => props.theme.colors.secondary};
+        }
     }
     &:hover::after {
         background-color: transparent;
@@ -42,6 +61,12 @@ export const ContentDiv = styled.div`
     gap: 1.5rem;
     grid-area: ${({imgStart}) => imgStart ? '1 / 7 / -1 / 13': '1 / 1 / -1 / 7'};
     position: relative;
+    z-index: 4;
+
+    @media screen and (max-width: 768px) {
+       grid-column: 1 / -1;
+       padding: 2rem;
+    }
 
     h1 {
         font-size: 1rem;
@@ -63,6 +88,13 @@ export const Desc = styled.div`
     box-shadow: 0 2px 5px ${props => props.theme.colors.primary2};
     z-index: 6;
 
+    @media screen and (max-width: 768px) {
+       box-shadow: none;
+       background: transparent;
+       padding: 0;
+       margin-top: 1rem;
+    }
+
 `
 export const LLDiv = styled.div`
     display: flex;
@@ -78,6 +110,15 @@ export const Lang = styled.div`
     display: flex;
     justify-content: ${({imgStart}) => imgStart ? 'end': 'start'};
     gap: 0.5rem;
+
+    @media screen and (max-width: 768px) {
+       p {
+        background-color: ${props => props.theme.colors.secondary};
+        border: 1.5px solid ${props => props.theme.colors.primary};
+        padding: 0.3rem 0.5rem;
+        border-radius: 5px;
+       }
+    }
 `
 export const Links = styled.div`
     display: flex;

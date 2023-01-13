@@ -130,18 +130,19 @@ export const MenuBar = styled.div`
 `
 export const MobileNav = styled.div`
     position: fixed;
+    visibility: ${({openNav}) => openNav ? '' : 'hidden'};
     top: 0;
     left: 0;
     right: 0;
     bottom: 0;
     height: 100vh;
-    z-index: 999;
+    z-index: ${({openNav}) => openNav ? '100' : '0'};
     opacity: ${({openNav}) => openNav ? '1' : '0'};
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    gap: 2rem;
+    gap: 3rem;
     text-align: right;
     background: ${props => props.theme.colors.primary2};
     transition: all 0.3s ease-out;
@@ -157,7 +158,7 @@ export const MobileNav = styled.div`
         left: 0;
         right: -0.5rem;
         bottom: 0;
-        background-color: ${props => props.theme.colors.secondary};
+        background-image: url(${navbg});
         transform-origin: 0 0;
         transform: ${({openNav}) => openNav ? 'skew(-14deg) translateX(0)' : 'skew(-14deg) translateX(-120%)'};
         transition: all 0.3s ease-out;
@@ -166,13 +167,14 @@ export const MobileNav = styled.div`
         content: '';
         display: block;
         position: absolute;
+        right: -0.5rem;
         width: 100%;
         height: 100%;
-        background-image: url(${navbg});
-        opacity: 0.4;
+        background-color: ${props => props.theme.colors.secondary};
+        transform-origin: 0 0;
+        transform: ${({openNav}) => openNav ? 'skew(-14deg) translateX(0)' : 'skew(-14deg) translateX(-120%)'};
+        opacity: 0.6;
     }
-
-
 
     a:nth-of-type(1){
         transform: ${({openNav}) => openNav ? 'translateX(2rem);' : 'translateX(10rem);'};
