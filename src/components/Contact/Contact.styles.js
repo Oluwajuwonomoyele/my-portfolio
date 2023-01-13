@@ -11,6 +11,10 @@ export const ContactContainer = styled.div`
     @media screen and (max-width: 768px) {
         padding: 4rem;
     }
+
+    @media screen and (max-width: 425px) {
+        padding: 2rem;
+    }      
 `
 export const ContactHeader = styled.div`
     display: flex;
@@ -19,6 +23,10 @@ export const ContactHeader = styled.div`
     h1 {
             font-size: 2rem;
             color: ${props => props.theme.colors.white};
+
+            @media screen and (max-width: 425px) {
+            font-size: 1.2rem;
+            }      
         }
     h2 {
         font-size: 7rem;
@@ -26,6 +34,11 @@ export const ContactHeader = styled.div`
         line-height: 7rem;
         color: ${props => props.theme.colors.primary};
         opacity: 0.3;
+
+        @media screen and (max-width: 425px) {
+            font-size: 3rem;
+            line-height: normal;
+        }      
     }
     div:nth-last-child(1) {
         background-color: ${props => props.theme.colors.white};
@@ -54,6 +67,10 @@ export const ContactContent = styled.div`
         padding: 2.5rem;
     }
 
+    @media screen and (max-width: 425px) {
+            padding: 2rem;
+    }      
+
     div:nth-child(1) {
         grid-area: 1 / 1 / 2 / 8;
     }
@@ -72,11 +89,19 @@ export const ContactContent = styled.div`
         font-size: 4rem;
         text-transform: uppercase;
         color: ${props => props.theme.colors.primary};
+
+        @media screen and (max-width: 425px) {
+            font-size: 3rem;
+        }      
     }
     p {
         font-size: 1.3rem;
         line-height: 3rem;
         color: ${props => props.theme.colors.white};
+
+        @media screen and (max-width: 425px) {
+            margin-top: 1rem;
+        }      
     }
     a {
         padding: 1rem;

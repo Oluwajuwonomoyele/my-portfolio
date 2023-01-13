@@ -11,6 +11,9 @@ export const SkillsContainer = styled.div`
     @media screen and (max-width: 768px) {
         padding: 4rem;
     }
+    @media screen and (max-width: 425px) {
+        padding: 2rem;
+    }      
 `
 export const SkillsHeader = styled.div`
     display: flex;
@@ -27,6 +30,9 @@ export const SkillsHeader = styled.div`
             @media screen and (max-width: 768px) {
                 font-size: 1.5rem;
             }
+            @media screen and (max-width: 425px) {
+            font-size: 1.2rem;
+            }      
         }
     h2 {
         font-size: 7rem;
@@ -34,6 +40,11 @@ export const SkillsHeader = styled.div`
         line-height: 7rem;
         color: ${props => props.theme.colors.primary};
         opacity: 0.3;
+
+        @media screen and (max-width: 425px) {
+            font-size: 3rem;
+            line-height: normal;
+        }      
     }
     div:nth-last-child(1) {
         background-color: ${props => props.theme.colors.white};
@@ -52,6 +63,10 @@ export const SkillsContent = styled.div`
     justify-content: center;
     gap: 3rem;
     flex-wrap: wrap;
+
+    @media screen and (max-width: 425px) {
+            padding: 4rem 0;
+        }      
 
 `
 export const Skill = styled.div`

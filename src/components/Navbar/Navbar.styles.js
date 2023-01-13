@@ -20,6 +20,10 @@ export const NavContainer = styled.div`
     display: flex;
     justify-content: space-between;
     align-items: center;
+
+    @media screen and (max-width: 425px) {
+        padding: 0 2rem;
+    }      
 `
 export const LogoContainer = styled.div`
     cursor: pointer;
@@ -29,16 +33,28 @@ export const LogoContainer = styled.div`
 `
 export const LogoImg = styled.img`
     max-width: 50px;
+
+    @media screen and (max-width: 600px) {
+       max-width: 35px;
+    }
 `
 export const Logo = styled.h1`
     color: ${props => props.theme.colors.white};
     letter-spacing: 0.1rem;
     font-weight: bold;
     font-size: 1.5rem;
+
+    @media screen and (max-width: 600px) {
+       font-size: 1rem;
+    }
 `
 export const LogoSpan = styled.span`
     color: ${props => props.theme.colors.primary};
     font-size: 2rem;
+
+    @media screen and (max-width: 600px) {
+       font-size: 1.5rem;
+    }
 `
 export const LinksContainer = styled.div`
     display: flex;
@@ -162,6 +178,10 @@ export const MobileNav = styled.div`
         transform-origin: 0 0;
         transform: ${({openNav}) => openNav ? 'skew(-14deg) translateX(0)' : 'skew(-14deg) translateX(-120%)'};
         transition: all 0.3s ease-out;
+
+        @media screen and (max-width: 425px) {
+            transform: ${({openNav}) => openNav ? 'skew(-9deg) translateX(0)' : 'skew(-9deg) translateX(-120%)'};
+        }      
     }
     &::after {
         content: '';
@@ -174,6 +194,10 @@ export const MobileNav = styled.div`
         transform-origin: 0 0;
         transform: ${({openNav}) => openNav ? 'skew(-14deg) translateX(0)' : 'skew(-14deg) translateX(-120%)'};
         opacity: 0.6;
+
+        @media screen and (max-width: 425px) {
+            transform: ${({openNav}) => openNav ? 'skew(-9deg) translateX(0)' : 'skew(-9deg) translateX(-120%)'};
+        }      
     }
 
     a:nth-of-type(1){
@@ -215,4 +239,8 @@ export const MobileNavLink = styled(Link)`
     font-size: 2.5rem;
     font-weight: bold;
     transition: all 0.2s ease-out;
+
+    @media screen and (max-width: 425px) {
+        font-size: 2rem;
+    }      
 `

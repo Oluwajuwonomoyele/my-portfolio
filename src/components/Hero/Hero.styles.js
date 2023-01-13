@@ -23,6 +23,10 @@ export const HeroContainer = styled.div`
         align-items: flex-start;
         padding: 4rem;
     }
+    @media screen and (max-width: 425px) {
+        padding: 2rem;
+        margin-bottom: 5rem;
+    }      
 `
 export const HeroImgContainer = styled.div`
      @media screen and (max-width: 768px) {
@@ -41,6 +45,10 @@ export const HeroContent = styled.div`
 export const HeroHeader = styled.h1`
     font-size: 4rem;
     color: ${props => props.theme.colors.primary};
+
+    @media screen and (max-width: 425px) {
+        font-size: 3rem;
+    }      
 `
 export const HeroText = styled.p`
     font-size: 1.2rem;

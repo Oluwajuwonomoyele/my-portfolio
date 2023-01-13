@@ -8,6 +8,11 @@ export const ProjectDesignSection = styled.div`
 
     @media screen and (max-width: 768px) {
        padding: 4rem 0;
+       border-radius: 20px;
+       overflow: hidden;
+    }
+    @media screen and (max-width: 425px) {
+       padding: 2rem 0;
     }
 `
 export const ImgDiv = styled.div`
@@ -110,6 +115,7 @@ export const Lang = styled.div`
     display: flex;
     justify-content: ${({imgStart}) => imgStart ? 'end': 'start'};
     gap: 0.5rem;
+    flex-wrap: wrap;
 
     @media screen and (max-width: 768px) {
        p {

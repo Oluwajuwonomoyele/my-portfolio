@@ -12,6 +12,9 @@ export const AboutContainer = styled.div`
     @media screen and (max-width: 768px) {
         padding: 4rem;
     }
+    @media screen and (max-width: 425px) {
+        padding: 2rem;
+    }      
 `
 
 export const AboutHeader = styled.div`
@@ -25,6 +28,9 @@ export const AboutHeader = styled.div`
             @media screen and (max-width: 768px) {
                 font-size: 1.5rem;
             }
+            @media screen and (max-width: 425px) {
+            font-size: 1.2rem;
+            }      
         }
     h2 {
         font-size: 7rem;
@@ -32,6 +38,11 @@ export const AboutHeader = styled.div`
         line-height: 7rem;
         color: ${props => props.theme.colors.primary};
         opacity: 0.3;
+
+        @media screen and (max-width: 425px) {
+            font-size: 3rem;
+            line-height: normal;
+        }      
     }
     div:nth-last-child(1) {
         background-color: ${props => props.theme.colors.white};
@@ -55,6 +66,10 @@ export const AboutContent = styled.div`
        flex-direction: column-reverse;
        padding: 4rem 0;
     }
+
+    @media screen and (max-width: 425px) {
+        text-align: center;
+    }      
 
     p {
         font-size: 1.3rem;

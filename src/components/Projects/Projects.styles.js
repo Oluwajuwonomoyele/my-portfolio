@@ -10,6 +10,9 @@ export const ProjectsContainer = styled.div`
     @media screen and (max-width: 768px) {
         padding: 4rem;
     }
+    @media screen and (max-width: 425px) {
+        padding: 2rem;
+    }      
 `
 export const ProjectsHeader = styled.div`
     display: flex;
@@ -22,6 +25,9 @@ export const ProjectsHeader = styled.div`
             @media screen and (max-width: 768px) {
                 font-size: 1.5rem;
             }
+            @media screen and (max-width: 600px) {
+                font-size: 1.2rem;
+            }
         }
     h2 {
         font-size: 7rem;
@@ -29,16 +35,33 @@ export const ProjectsHeader = styled.div`
         line-height: 7rem;
         color: ${props => props.theme.colors.primary};
         opacity: 0.5;
+
+        @media screen and (max-width: 600px) {
+            font-size: 6rem;
+        }
+        @media screen and (max-width: 425px) {
+            font-size: 3rem;
+            line-height: normal;
+        }      
     }
     div:nth-last-child(1) {
         background-color: ${props => props.theme.colors.white};
         height: 1px;
         width: 400px;
         border-radius: 4px;
+
+        @media screen and (max-width: 768px) {
+            display: none;
+        }
     }
 `
 export const ProjectDesigns = styled.div`
     display: flex;
     flex-direction: column;
     gap: 3rem;
+
+    @media screen and (max-width: 425px) {
+        gap: 2rem;
+        margin-top: 3rem;
+    }      
 `
