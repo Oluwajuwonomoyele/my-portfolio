@@ -196,6 +196,7 @@ export const MobileNav = styled.div`
         opacity: 0.6;
 
         @media screen and (max-width: 425px) {
+            right: -0.3rem;
             transform: ${({openNav}) => openNav ? 'skew(-9deg) translateX(0)' : 'skew(-9deg) translateX(-120%)'};
         }      
     }
