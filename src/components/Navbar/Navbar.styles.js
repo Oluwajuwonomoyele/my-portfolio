@@ -3,12 +3,14 @@ import { Link } from "react-scroll";
 import navbg from '../../assets/navbg.gif';
 
 export const Nav = styled.nav`
-     background-color: transparent;
+     background-color: ${({navScroll}) => navScroll ? '#2c2b2b' : 'transparent' };
      height: 100px;
      display: flex;
      align-items: center;
-     position: relative;
-     z-index: 555;
+     position: ${({navScroll}) => navScroll ? 'fixed': 'relative' };
+     width: 100%;
+     z-index: 10;
+     transition: all 0.5s ease;
      
 `
 export const NavContainer = styled.div`

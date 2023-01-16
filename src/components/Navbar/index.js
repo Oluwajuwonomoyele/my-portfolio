@@ -1,9 +1,9 @@
 import { Nav, NavContainer, LogoContainer, LogoImg, Logo, LogoSpan, LinksContainer, NavLink, MenuBar, MobileNav, MobileNavLink } from "./Navbar.styles";
 import logo from '../../assets/logo.png'
 
-const Navbar = ({openNav, setOpenNav}) => {
+const Navbar = ({openNav, setOpenNav, navScroll}) => {
     return ( 
-        <Nav>
+        <Nav navScroll={navScroll}>
             <NavContainer>
                 <LogoContainer>
                     <LogoImg src={logo} />

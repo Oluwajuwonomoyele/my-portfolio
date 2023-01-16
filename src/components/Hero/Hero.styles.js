@@ -4,6 +4,8 @@ export const HeroSection = styled.section`
     height: 87vh;
     display: flex;
     align-items: center;
+    padding-top: ${({navScroll}) => navScroll ? '80px': '0' };
+    transition: padding 0.5s ease;
 
     @media screen and (max-width: 768px) {
         height: auto;
