@@ -75,6 +75,10 @@ export const AboutContent = styled.div`
         font-size: 1.3rem;
         color: ${props => props.theme.colors.white};
         line-height: 3rem;   
+
+        @media screen and (max-width: 425px) {
+            font-size: 1.2rem;
+        }      
     }
 
     img {

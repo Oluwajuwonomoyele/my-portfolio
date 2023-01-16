@@ -66,7 +66,7 @@ export const SkillsContent = styled.div`
 
     @media screen and (max-width: 425px) {
             padding: 4rem 0;
-        }      
+    }      
 
 `
 export const Skill = styled.div`
@@ -82,8 +82,19 @@ export const Skill = styled.div`
     border-radius: 4px;
     transition: all 0.3s ease-out;
 
+    @media screen and (max-width: 425px) {
+            font-size: 1.8rem;
+            padding: 1rem;
+            width: 140px;
+    }      
+
     p {
         font-size: 2rem;
+
+        @media screen and (max-width: 425px) {
+            font-size: 1.2rem;
+            font-weight: bold;
+        }      
     }
 
     &:hover {

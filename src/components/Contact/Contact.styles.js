@@ -101,6 +101,7 @@ export const ContactContent = styled.div`
 
         @media screen and (max-width: 425px) {
             margin-top: 1rem;
+            font-size: 1.2rem;
         }      
     }
     a {
