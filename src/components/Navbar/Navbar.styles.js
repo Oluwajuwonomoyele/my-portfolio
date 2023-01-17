@@ -10,6 +10,7 @@ export const Nav = styled.nav`
      position: ${({navScroll}) => navScroll ? 'fixed': 'relative' };
      width: 100%;
      z-index: 10;
+     filter: ${({navScroll}) => navScroll ? 'drop-shadow(0px 1px 2px #ffc5ad)': '' };
      transition: all 0.5s ease;
      
 `
@@ -39,6 +40,9 @@ export const LogoImg = styled.img`
     @media screen and (max-width: 600px) {
        max-width: 35px;
     }
+    @media screen and (max-width: 375px) {
+       max-width: 25px;
+    }
 `
 export const Logo = styled.h1`
     color: ${props => props.theme.colors.white};
@@ -49,6 +53,9 @@ export const Logo = styled.h1`
     @media screen and (max-width: 600px) {
        font-size: 1rem;
     }
+    @media screen and (max-width: 375px) {
+       font-size: 1rem;
+    }
 `
 export const LogoSpan = styled.span`
     color: ${props => props.theme.colors.primary};
@@ -56,6 +63,9 @@ export const LogoSpan = styled.span`
 
     @media screen and (max-width: 600px) {
        font-size: 1.5rem;
+    }
+    @media screen and (max-width: 375px) {
+       font-size: 1.3rem;
     }
 `
 export const LinksContainer = styled.div`
@@ -120,6 +130,9 @@ export const MenuBar = styled.div`
 
     @media screen and (min-width: 790px) {
         display: none;
+    }
+    @media screen and (max-width: 375px) {
+       transform: scale(0.7);
     }
 
     div {
