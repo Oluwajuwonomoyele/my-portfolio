@@ -11,7 +11,7 @@ export const Nav = styled.nav`
      width: 100%;
      z-index: 10;
      filter: ${({navScroll}) => navScroll ? 'drop-shadow(0px 1px 2px #ffc5ad)': '' };
-     transition: all 0.5s ease;
+     transition: all 0.4s ease;
      
 `
 export const NavContainer = styled.div`
