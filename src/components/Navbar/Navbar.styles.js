@@ -43,6 +43,9 @@ export const LogoImg = styled.img`
     @media screen and (max-width: 375px) {
        max-width: 25px;
     }
+    @media screen and (max-width: 320px) {
+       max-width: 35px;
+    }
 `
 export const Logo = styled.h1`
     color: ${props => props.theme.colors.white};
@@ -55,6 +58,9 @@ export const Logo = styled.h1`
     }
     @media screen and (max-width: 375px) {
        font-size: 1rem;
+    }
+    @media screen and (max-width: 320px) {
+       display: none;
     }
 `
 export const LogoSpan = styled.span`

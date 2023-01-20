@@ -44,6 +44,9 @@ export const SkillsHeader = styled.div`
         @media screen and (max-width: 425px) {
             font-size: 3rem;
             line-height: normal;
+        }
+        @media screen and (max-width: 320px) {
+            font-size: 2.6rem;
         }      
     }
     div:nth-last-child(1) {

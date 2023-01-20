@@ -60,7 +60,7 @@ export const ProjectDesigns = styled.div`
     flex-direction: column;
     gap: 3rem;
 
-    @media screen and (max-width: 425px) {
+    @media screen and (max-width: 768px) {
         gap: 2rem;
         margin-top: 3rem;
     }      

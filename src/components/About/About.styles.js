@@ -82,10 +82,14 @@ export const AboutContent = styled.div`
     }
 
     img {
-        width: 25rem;    
+        max-width: 25rem;    
          
         @media screen and (max-width: 768px) {
-            width: 20rem;
+            max-width: 20rem;
         }
+        @media screen and (max-width: 320px) {
+            max-width: 15rem;
+        }
+
     }
 `

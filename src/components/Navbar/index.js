@@ -11,10 +11,10 @@ const Navbar = ({openNav, setOpenNav, navScroll}) => {
                 </LogoContainer>
 
                 <LinksContainer>
-                    <NavLink to='projects' activeClass="active" smooth={true} spy={true} duration={500}>Projects</NavLink>
-                    <NavLink to='about' activeClass="active" smooth={true} spy={true} duration={500}>About Me</NavLink>
-                    <NavLink to='contact' activeClass="active" smooth={true} spy={true} duration={500}>Contact Me</NavLink>
-                    <NavLink to='resume' activeClass="active" smooth={true} spy={true} duration={500}>Resume</NavLink>
+                    <NavLink to='projects' activeClass="active" smooth={true} spy={true} duration={500} offset={-100}>Projects</NavLink>
+                    <NavLink to='about' activeClass="active" smooth={true} spy={true} duration={500} offset={-100}>About Me</NavLink>
+                    <NavLink to='contact' activeClass="active" smooth={true} spy={true} duration={500} offset={-100}>Contact Me</NavLink>
+                    <NavLink to='resume' activeClass="active" smooth={true} spy={true} duration={500} offset={-100}>Resume</NavLink>
                 </LinksContainer>
 
                 <MenuBar onClick={() => setOpenNav(!openNav)} openNav={openNav}>
@@ -23,10 +23,10 @@ const Navbar = ({openNav, setOpenNav, navScroll}) => {
                     <div></div>
                 </MenuBar>
                 <MobileNav openNav={openNav}>
-                    <MobileNavLink to='projects' smooth={true} spy={true} duration={500} activeClass="active" onClick={() => setOpenNav(false)}>Projects</MobileNavLink>
-                    <MobileNavLink to='about' smooth={true} spy={true} duration={500} activeClass="active" onClick={() => setOpenNav(false)}>About Me</MobileNavLink>
-                    <MobileNavLink to='contact' smooth={true} spy={true} duration={500} activeClass="active" onClick={() => setOpenNav(false)}>Contact Me</MobileNavLink>
-                    <MobileNavLink to='resume' activeClass="active" onClick={() => setOpenNav(false)}>Resume</MobileNavLink>
+                    <MobileNavLink to='projects' smooth={true} spy={true} duration={500} activeClass="active" offset={-200} onClick={() => setOpenNav(false)}>Projects</MobileNavLink>
+                    <MobileNavLink to='about' smooth={true} spy={true} duration={500} activeClass="active" offset={-200} onClick={() => setOpenNav(false)}>About Me</MobileNavLink>
+                    <MobileNavLink to='contact' smooth={true} spy={true} duration={500} activeClass="active" offset={-200} onClick={() => setOpenNav(false)}>Contact Me</MobileNavLink>
+                    <MobileNavLink to='resume' activeClass="active" offset={-200} onClick={() => setOpenNav(false)}>Resume</MobileNavLink>
                 </MobileNav>
             </NavContainer>
         </Nav>

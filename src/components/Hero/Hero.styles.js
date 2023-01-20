@@ -63,6 +63,7 @@ export const HeroText = styled.p`
 `
 export const HeroText2 = styled.p`
     font-size: 1.2rem;
+    line-height: 2rem;
     color: ${props => props.theme.colors.white};
 
     a {

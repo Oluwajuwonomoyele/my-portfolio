@@ -7,7 +7,7 @@ export const ProjectDesignSection = styled.div`
     align-items: center;
 
     @media screen and (max-width: 768px) {
-       padding: 4rem 0;
+       padding: 2rem 0;
        border-radius: 20px;
        overflow: hidden;
     }
@@ -25,7 +25,7 @@ export const ImgDiv = styled.div`
 
     @media screen and (max-width: 768px) {
        grid-column: 1 / -1;
-       height: 28rem;
+       height: 100%;
 
        img {
             height: 100%;
@@ -70,7 +70,7 @@ export const ContentDiv = styled.div`
 
     @media screen and (max-width: 768px) {
        grid-column: 1 / -1;
-       padding: 2rem;
+       padding: 3rem 2rem;
     }
 
     h1 {

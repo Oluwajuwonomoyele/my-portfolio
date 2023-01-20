@@ -93,6 +93,9 @@ export const ContactContent = styled.div`
         @media screen and (max-width: 425px) {
             font-size: 3rem;
         }      
+        @media screen and (max-width: 320px) {
+            font-size: 2.6rem;
+        }
     }
     p {
         font-size: 1.3rem;
@@ -144,6 +147,6 @@ export const Acknowlodgment = styled.p`
     text-align: center;
     font-weight: bold;
     color: ${props => props.theme.colors.primary2};
-    padding-bottom: 1rem;
+    padding: 0 3rem 1rem 3rem
 
 `
