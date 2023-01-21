@@ -22,7 +22,7 @@ function App() {
   const [navScroll, setNavScroll] = useState(false)
     
     const changeNavBg = () => {
-        if(window.scrollY >= 70){
+        if(window.scrollY >= 50){
             setNavScroll(true)
         }else {
             setNavScroll(false)
@@ -32,9 +32,6 @@ function App() {
     useEffect(() => {
         window.addEventListener('scroll', changeNavBg)
     }, [])
-
-
-
 
   return (
     <Router>

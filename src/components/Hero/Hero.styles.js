@@ -4,7 +4,7 @@ export const HeroSection = styled.section`
     height: 87vh;
     display: flex;
     align-items: center;
-    padding-top: ${({navScroll}) => navScroll ? '80px': '0' };
+    padding-top: 80px;
     transition: padding 0.5s ease;
 
     @media screen and (max-width: 768px) {
@@ -51,6 +51,9 @@ export const HeroHeader = styled.h1`
     @media screen and (max-width: 425px) {
         font-size: 3rem;
     }      
+    @media screen and (max-width: 320px) {
+        font-size: 2.6rem;
+    }      
 `
 export const HeroText = styled.p`
     font-size: 1.2rem;
@@ -70,6 +73,25 @@ export const HeroText2 = styled.p`
         color: ${props => props.theme.colors.primary};
         font-family: 'Nunito Sans', sans-serif;
         font-weight: bold;
+        transition: all 0.3s ease-out;
+        position: relative;
+        cursor: pointer;
+
+        &::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 3px;
+            border-radius: 3px;
+            transition: all 0.3s ease-out;
+            background-color: ${props => props.theme.colors.primary};
+        }
+        
+        &:hover::after {
+             width: 100%;
+        }
     }
 `
 export const ContactsContainer = styled.div`

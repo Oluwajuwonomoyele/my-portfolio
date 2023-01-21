@@ -112,7 +112,7 @@ export const ContactContent = styled.div`
         color: ${props => props.theme.colors.primary};
         position: relative;
         border-radius: 5px;
-        z-index: 22;
+        z-index: 1;
         font-size: 1.5rem;
         display: flex;
         align-items: center;

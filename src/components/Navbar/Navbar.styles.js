@@ -4,14 +4,14 @@ import navbg from '../../assets/navbg.gif';
 
 export const Nav = styled.nav`
      background-color: ${({navScroll}) => navScroll ? '#2c2b2b' : 'transparent' };
-     height: 100px;
+     height: ${({navScroll}) => navScroll ? '80px' : '100px' };
      display: flex;
      align-items: center;
-     position: ${({navScroll}) => navScroll ? 'fixed': 'relative' };
+     position: fixed;
      width: 100%;
      z-index: 10;
      filter: ${({navScroll}) => navScroll ? 'drop-shadow(0px 1px 2px #ffc5ad)': '' };
-     transition: all 0.4s ease;
+     transition: all 0.3s ease;
      
 `
 export const NavContainer = styled.div`
@@ -35,7 +35,7 @@ export const LogoContainer = styled.div`
     gap: 0.5rem;
 `
 export const LogoImg = styled.img`
-    max-width: 50px;
+    max-width: 40px;
 
     @media screen and (max-width: 600px) {
        max-width: 35px;
@@ -82,6 +82,20 @@ export const LinksContainer = styled.div`
     @media screen and (max-width: 768px) {
         display: none;
     }
+
+    a:nth-last-child(1){
+        border: 2px solid ${props => props.theme.colors.primary};
+        padding: 0.5rem 1rem;
+        border-radius: 3px;
+        color: ${props => props.theme.colors.primary};
+        font-weight: bold;
+        transition: all 0.4s ease-out;
+
+        &:hover {
+            background-color: ${props => props.theme.colors.primary};
+            color: ${props => props.theme.colors.secondary};
+        }
+    }
 `
 export const NavLink = styled(Link)`
     color: ${props => props.theme.colors.white};
@@ -99,7 +113,7 @@ export const NavLink = styled(Link)`
         width: 0;
         height: 3px;
         border-radius: 3px;
-        transition: all 0.4s ease-out;
+        transition: all 0.3s ease-out;
         background-color: ${props => props.theme.colors.primary};
     }
 
@@ -107,24 +121,8 @@ export const NavLink = styled(Link)`
         width: 100%;
     }
 
-    &:active {
-        color: ${props => props.theme.colors.primary};
-    }
-
-    &:nth-last-child(1){
-        border: 2px solid ${props => props.theme.colors.primary};
-        padding: 0.5rem 1rem;
-        border-radius: 3px;
-        color: ${props => props.theme.colors.primary};
-    }
-
-    &:nth-last-child(1):hover::after {
-        width: 0;
-    }
-
-    &:nth-last-child(1):hover {
-        background-color: ${props => props.theme.colors.primary};
-        color: ${props => props.theme.colors.secondary};
+    &.active {
+        color: ${props => props.theme.colors.primary2};
     }
 `
 export const MenuBar = styled.div`
@@ -238,19 +236,28 @@ export const MobileNav = styled.div`
         opacity: ${({openNav}) => openNav ? '1' : '0'};
     }
     a:nth-of-type(4){
-        transform: ${({openNav}) => openNav ? 'translateX(-2rem);' : 'translateX(-10rem);'};
+        transform: ${({openNav}) => openNav ? 'translateX(-2rem);' : 'translateY(10rem);'};
         border: 3px solid ${props => props.theme.colors.primary};
         opacity: ${({openNav}) => openNav ? '1' : '0'};
         padding: 0.5rem 1rem;
         text-align: center;
         border-radius: 4px;
         transition-delay: 0.55s;
+        position: relative;
+        z-index: 200;
+        color: ${props => props.theme.colors.primary};
+        font-size: 2.5rem;
+        font-weight: bold;
+        transition: all 0.2s ease-out;
 
         &:hover {
             background-color: ${props => props.theme.colors.primary};
             color: ${props => props.theme.colors.secondary};
         }
 
+        @media screen and (max-width: 425px) {
+            font-size: 2rem;
+        }      
     }
 `
 
