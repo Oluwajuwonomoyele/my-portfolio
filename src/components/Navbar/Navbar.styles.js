@@ -135,7 +135,7 @@ export const MenuBar = styled.div`
     @media screen and (min-width: 790px) {
         display: none;
     }
-    @media screen and (max-width: 375px) {
+    @media screen and (max-width: 425px) {
        transform: scale(0.7);
     }
 
