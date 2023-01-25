@@ -152,6 +152,7 @@ export const Acknowlodgment = styled.p`
 `
 
 export const ContactSliderOne = styled.div`
+    display: none;
 `
 export const ContactSliderTwo = styled.div`
 `
