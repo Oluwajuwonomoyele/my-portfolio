@@ -40,12 +40,6 @@ export const LogoImg = styled.img`
     @media screen and (max-width: 600px) {
        max-width: 35px;
     }
-    @media screen and (max-width: 375px) {
-       max-width: 25px;
-    }
-    @media screen and (max-width: 320px) {
-       max-width: 35px;
-    }
 `
 export const Logo = styled.h1`
     color: ${props => props.theme.colors.white};
@@ -56,10 +50,7 @@ export const Logo = styled.h1`
     @media screen and (max-width: 600px) {
        font-size: 1rem;
     }
-    @media screen and (max-width: 375px) {
-       font-size: 1rem;
-    }
-    @media screen and (max-width: 320px) {
+    @media screen and (max-width: 425px) {
        display: none;
     }
 `
@@ -136,7 +127,7 @@ export const MenuBar = styled.div`
         display: none;
     }
     @media screen and (max-width: 425px) {
-       transform: scale(0.7);
+       transform: scale(0.8);
     }
 
     div {

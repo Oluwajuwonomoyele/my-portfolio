@@ -90,7 +90,7 @@ export const Desc = styled.div`
     color: ${props => props.theme.colors.primary};
     font-size: 1.1rem;
     font-weight: bold;
-    box-shadow: 0 2px 5px ${props => props.theme.colors.primary2};
+    box-shadow: 0 3px 4px #664D42;
     line-height: 1.7rem;
     z-index: 6;
 
