@@ -1,4 +1,4 @@
-import { ContactSection, ContactContainer, ContactHeader, ContactContent, Acknowlodgment, ContactSliderOne, ContactSliderTwo } from "./Contact.styles";
+import { ContactSection, ContactContainer, ContactHeader, ContactContent, Acknowlodgment } from "./Contact.styles";
 import { MdDoubleArrow } from 'react-icons/md'
 
 const Contact = () => {
@@ -28,12 +28,6 @@ const Contact = () => {
             <Acknowlodgment>
                 Designed and Built by Juwon Olutomisin
             </Acknowlodgment>
-            <ContactSliderOne>
-
-            </ContactSliderOne>
-            <ContactSliderTwo>
-
-            </ContactSliderTwo>
         </ContactSection>
     );
 }

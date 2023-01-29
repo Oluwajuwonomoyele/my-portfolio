@@ -150,9 +150,3 @@ export const Acknowlodgment = styled.p`
     padding: 0 3rem 1rem 3rem
 
 `
-
-export const ContactSliderOne = styled.div`
-
-`
-export const ContactSliderTwo = styled.div`
-`
