@@ -7,6 +7,8 @@ import Skills from "./components/Skills";
 import About from "./components/About";
 import Contact from "./components/Contact";
 import { useEffect, useState } from "react";
+import ContactSliderLeft from "./components/ContactSliders/ContactSliderLeft";
+import ContactSliderRight from "./components/ContactSliders/ContactSliderRight";
 
 function App() {
   const theme = {
@@ -37,6 +39,8 @@ function App() {
     <Router>
       <ThemeProvider theme={theme}>
         <Navbar openNav={openNav} setOpenNav={setOpenNav} navScroll={navScroll}/>
+        <ContactSliderLeft />
+        <ContactSliderRight />
         <Hero navScroll={navScroll}/>
         <Projects />
         <About />

@@ -28,7 +28,6 @@ const Hero = () => {
                     <a href="https://www.linkedin.com/in/oluwajuwon-olutomisin/">
                         <FiLinkedin />
                     </a>
-
                 </Contacts>
                 <Line></Line>
             </ContactsContainer>
