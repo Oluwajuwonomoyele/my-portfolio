@@ -9,6 +9,7 @@ import Contact from "./components/Contact";
 import { useEffect, useState } from "react";
 import ContactSliderLeft from "./components/ContactSliders/ContactSliderLeft";
 import ContactSliderRight from "./components/ContactSliders/ContactSliderRight";
+import ScrollToTop from "./ScrollToTop";
 
 function App() {
   const theme = {
@@ -38,14 +39,16 @@ function App() {
   return (
     <Router>
       <ThemeProvider theme={theme}>
-        <Navbar openNav={openNav} setOpenNav={setOpenNav} navScroll={navScroll}/>
-        <ContactSliderLeft />
-        <ContactSliderRight />
-        <Hero navScroll={navScroll}/>
-        <Projects />
-        <About />
-        <Skills />
-        <Contact />
+        <ScrollToTop>
+          <Navbar openNav={openNav} setOpenNav={setOpenNav} navScroll={navScroll}/>
+          <ContactSliderLeft />
+          <ContactSliderRight />
+          <Hero navScroll={navScroll}/>
+          <Projects />
+          <About />
+          <Skills />
+          <Contact />
+        </ScrollToTop>
       </ThemeProvider>
     </Router>
   );
