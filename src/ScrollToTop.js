@@ -10,7 +10,6 @@ const ScrollToTop = ({children}) => {
       }
     }, [location])
     
-    console.log(location)
   return (
     <>
         {children}

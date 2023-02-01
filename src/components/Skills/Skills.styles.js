@@ -92,7 +92,7 @@ export const Skill = styled.div`
     }      
 
     p {
-        font-size: 2rem;
+        font-size: 1.5rem;
 
         @media screen and (max-width: 425px) {
             font-size: 1.2rem;

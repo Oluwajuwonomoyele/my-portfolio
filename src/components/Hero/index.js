@@ -2,6 +2,7 @@ import { HeroSection, HeroContainer, HeroImgContainer, HeroImg, HeroContent, Her
 import img from '../../assets/profile.svg'
 import { FiGithub, FiTwitter, FiLinkedin, FiMail } from 'react-icons/fi'
 import { Link } from "react-scroll";
+import Typed from "react-typed";
 
 const Hero = () => {
     return (  
@@ -12,8 +13,13 @@ const Hero = () => {
                 </HeroImgContainer>
 
                 <HeroContent>
-                    <HeroHeader>Hello There! Juwon Olutomisin Here.</HeroHeader>
-                    <HeroText>I am frontend developer based in Lagos, Nigeria with 2+ years of developing mobile responsive, user-friendly web application frontends. From using CSS to implement pixel perfect designs to utilizing frontend frameworks to consume API,I make great web user interface experience for users.</HeroText>
+                    <HeroHeader>
+                        <Typed showCursor={false} 
+                        strings={['Hello There! Juwon Olutomisin Here.']}
+                        typeSpeed={80}
+                        />
+                    </HeroHeader>
+                    <HeroText>I am a frontend web developer based in Lagos, Nigeria able to develop responsive, user-friendly web application for all devices. From using CSS to implement frontend designs to utilizing frontend frameworks for optimal consumption of APIs, I make great web user interface experience for users.</HeroText>
                     <HeroText2>Learn more <Link to='about' smooth={true} spy={true} duration={500} offset={-100}>about me</Link> or jump straight to <Link to='projects' smooth={true} spy={true} duration={500} offset={-100}>my work</Link>.</HeroText2>
                 </HeroContent>
             </HeroContainer>

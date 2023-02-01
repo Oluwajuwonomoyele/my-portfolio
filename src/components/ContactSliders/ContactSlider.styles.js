@@ -13,7 +13,7 @@ export const BarContainer = styled.div`
     height: 9vh;
     left: 0;
     bottom: 5rem;
-    z-index: 20;
+    z-index: 15;
     border-top-right-radius: 4px;
     border-bottom-right-radius: 4px;
 `
@@ -77,7 +77,7 @@ export const BarContainerRight = styled.div`
     height: 10vh;
     right: 0;
     bottom: 4.8rem;
-    z-index: 20;
+    z-index: 15;
     border-top-left-radius: 4px;
     border-bottom-left-radius: 4px;
 `
