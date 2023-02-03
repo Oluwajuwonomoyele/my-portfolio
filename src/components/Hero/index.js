@@ -1,8 +1,8 @@
 import { HeroSection, HeroContainer, HeroImgContainer, HeroImg, HeroContent, HeroHeader, HeroText, HeroText2, ContactsContainer, ContactsContainer2, Contacts, Line } from "./Hero.styles";
-import img from '../../assets/profile.svg'
 import { FiGithub, FiTwitter, FiLinkedin, FiMail } from 'react-icons/fi'
 import { Link } from "react-scroll";
 import Typed from "react-typed";
+import img from '../../assets/profile.svg';
 
 const Hero = () => {
     return (  
