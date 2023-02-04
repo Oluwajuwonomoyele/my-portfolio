@@ -37,7 +37,7 @@ export const Bar = styled.div`
 
 export const Details = styled.div`
     position: fixed;
-    left: ${({slideOut}) => slideOut ? '0' : '-200px'};
+    left: ${({slideOut, isRightOpen}) => slideOut && !isRightOpen ? '0' : '-200px'};
     background-color: ${props => props.theme.colors.secondary};
     bottom: 5rem;
     max-width: 80vw;
@@ -101,7 +101,7 @@ export const BarRight = styled.div`
 
 export const DetailsRight = styled.div`
     position: fixed;
-    right: ${({slideOut}) => slideOut ? '0' : '-155px'};
+    right: ${({slideOut, isLeftOpen}) => slideOut && !isLeftOpen ? '0' : '-155px'};
     background-color: ${props => props.theme.colors.secondary};
     bottom: 4.8rem;
     max-width: 80vw;

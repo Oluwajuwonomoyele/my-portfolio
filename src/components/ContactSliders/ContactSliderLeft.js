@@ -2,11 +2,18 @@ import { SliderOneContainer, BarContainer, Bar, Details } from './ContactSlider.
 import { FiGithub, FiTwitter, FiLinkedin} from 'react-icons/fi';
 import { useState } from 'react';
 
-const ContactSliderLeft = () => {
+const ContactSliderLeft = ({setIsLeftOpen, setIsRightOpen, isRightOpen}) => {
     const [ slideOut, setSlideOut ] = useState(false)
 
     const toggleSlideOut = () => {
-        setSlideOut(!slideOut)
+        if(isRightOpen){
+            setIsLeftOpen(true)
+            setIsRightOpen(false)
+            setSlideOut(true)
+        }else {
+            setIsLeftOpen(true)
+            setSlideOut(!slideOut)
+        }
     }
 
     return (
@@ -14,7 +21,7 @@ const ContactSliderLeft = () => {
             <BarContainer>
                 <Bar onClick={() => toggleSlideOut()}></Bar>
             </BarContainer>
-            <Details slideOut={slideOut}>
+            <Details slideOut={slideOut} isRightOpen={isRightOpen}>
                 <a href="https://github.com/oluwajuwonomoyele">
                     <FiGithub />
                 </a>

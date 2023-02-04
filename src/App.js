@@ -10,6 +10,7 @@ import { useEffect, useState } from "react";
 import ContactSliderLeft from "./components/ContactSliders/ContactSliderLeft";
 import ContactSliderRight from "./components/ContactSliders/ContactSliderRight";
 import ScrollToTop from "./ScrollToTop";
+import AnimatedCursor from 'react-animated-cursor';
 
 function App() {
   const theme = {
@@ -23,6 +24,8 @@ function App() {
 
   const [openNav,setOpenNav] = useState(false)
   const [navScroll, setNavScroll] = useState(false)
+  const [isLeftOpen, setIsLeftOpen ] = useState(false)
+  const [isRightOpen, setIsRightOpen ] = useState(false)
     
     const changeNavBg = () => {
         if(window.scrollY >= 50){
@@ -40,9 +43,20 @@ function App() {
     <Router>
       <ThemeProvider theme={theme}>
         <ScrollToTop>
+          <AnimatedCursor 
+           innerSize={15}
+           outerSize={25}
+           color='255, 197, 173'
+           outerAlpha={0.5}
+           innerScale={1}
+           outerScale={2}
+           clickables={[
+             'a',
+             'button',
+             '.link' ]} />
           <Navbar openNav={openNav} setOpenNav={setOpenNav} navScroll={navScroll}/>
-          <ContactSliderLeft />
-          <ContactSliderRight />
+          <ContactSliderLeft setIsLeftOpen={setIsLeftOpen} isRightOpen={isRightOpen} setIsRightOpen={setIsRightOpen} />
+          <ContactSliderRight setIsRightOpen={setIsRightOpen} isLeftOpen={isLeftOpen} setIsLeftOpen={setIsLeftOpen} />
           <Hero navScroll={navScroll}/>
           <Projects />
           <About />
