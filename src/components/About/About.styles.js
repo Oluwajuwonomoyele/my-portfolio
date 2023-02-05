@@ -87,8 +87,8 @@ export const AboutContent = styled.div`
         @media screen and (max-width: 768px) {
             max-width: 20rem;
         }
-        @media screen and (max-width: 320px) {
-            max-width: 15rem;
+        @media screen and (max-width: 370px) {
+            max-width: 16rem;
         }
 
     }
