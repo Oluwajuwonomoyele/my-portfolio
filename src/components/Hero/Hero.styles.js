@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled, { keyframes } from "styled-components";
 
 export const HeroSection = styled.section`
     height: 87vh;
@@ -44,9 +44,28 @@ export const HeroContent = styled.div`
     flex-direction: column;
     gap: 2rem;
 `
+const flow = keyframes`
+    0% {
+        background-position: 51% 0%
+    }
+    50% {
+        background-position: 20% 100%
+    }
+    70% {
+        background-position: 51% 0%
+    }
+    100% {
+        background-position: 0% 0%;
+    }
+`
 export const HeroHeader = styled.h1`
     font-size: 4rem;
-    color: ${props => props.theme.colors.primary};
+    color: transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+    background-image: linear-gradient( 45deg, #ffc5ad, #fb9a69, #F5C2A9, #E87435 );
+    background-size: 100% 400%;
+    animation: ${flow} infinite 14s linear alternate;
 
     @media screen and (max-width: 425px) {
         font-size: 3rem;
