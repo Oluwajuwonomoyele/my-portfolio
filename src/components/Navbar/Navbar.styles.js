@@ -4,13 +4,13 @@ import navbg from '../../assets/navbg.gif';
 
 export const Nav = styled.nav`
      background-color: ${({navScroll}) => navScroll ? '#2c2b2b' : 'transparent' };
-     height: ${({navScroll}) => navScroll ? '80px' : '100px' };
+     height: ${({navScroll, openNav}) => navScroll ? '80px' : navScroll && openNav ? '120px' : '100px' };
      display: flex;
      align-items: center;
      position: fixed;
      width: 100%;
-     z-index: 10;
-     filter: ${({navScroll}) => navScroll ? 'drop-shadow(0px 1px 2px #ffc5ad)': '' };
+     z-index: 19;
+     filter: ${({navScroll, openNav}) => navScroll ? 'drop-shadow(0px 1px 2px #ffc5ad)': navScroll && openNav ? '' : '' };
      transition: all 0.3s ease;
      
 `
@@ -33,6 +33,8 @@ export const LogoContainer = styled.div`
     display: flex;
     align-items: center;
     gap: 0.5rem;
+    position: relative;
+    z-index: 999;
 `
 export const LogoImg = styled.img`
     max-width: 40px;
@@ -156,90 +158,41 @@ export const MenuBar = styled.div`
 `
 export const MobileNav = styled.div`
     position: fixed;
-    visibility: ${({openNav}) => openNav ? '' : 'hidden'};
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
+    inset: 0;
+    width: 100%;
     height: 100vh;
-    z-index: ${({openNav}) => openNav ? '100' : '0'};
-    opacity: ${({openNav}) => openNav ? '1' : '0'};
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 3rem;
-    text-align: right;
-    background: ${props => props.theme.colors.primary2};
-    transition: all 0.3s ease-out;
+    z-index: 66;
 
     @media screen and (min-width: 790px) {
         display: none;
     }
 
-    &::before {
-        content: '';
-        position: absolute;
-        top: 0;
-        left: 0;
-        right: -0.5rem;
-        bottom: 0;
-        background-image: url(${navbg});
-        transform-origin: 0 0;
-        transform: ${({openNav}) => openNav ? 'skew(-14deg) translateX(0)' : 'skew(-14deg) translateX(-120%)'};
-        transition: all 0.3s ease-out;
-
-        @media screen and (max-width: 425px) {
-            transform: ${({openNav}) => openNav ? 'skew(-9deg) translateX(0)' : 'skew(-9deg) translateX(-120%)'};
-        }      
-    }
-    &::after {
-        content: '';
-        display: block;
-        position: absolute;
-        right: -0.5rem;
-        width: 100%;
-        height: 100%;
-        background-color: ${props => props.theme.colors.secondary};
-        transform-origin: 0 0;
-        transform: ${({openNav}) => openNav ? 'skew(-14deg) translateX(0)' : 'skew(-14deg) translateX(-120%)'};
-        opacity: 0.6;
-
-        @media screen and (max-width: 425px) {
-            right: -0.3rem;
-            transform: ${({openNav}) => openNav ? 'skew(-9deg) translateX(0)' : 'skew(-9deg) translateX(-120%)'};
-        }      
-    }
-
     a:nth-of-type(1){
         transform: ${({openNav}) => openNav ? 'translateX(2rem);' : 'translateX(10rem);'};
         opacity: ${({openNav}) => openNav ? '1' : '0'};
-        transition-delay: 0.4s;
+        transition: all 0.5s ease-out 0.4s;
     }
     a:nth-of-type(2){
         transform: ${({openNav}) => openNav ? 'translateX(-2rem);' : 'translateX(-10rem);'};
-        transition-delay: 0.45s;
+        transition: all 0.5s ease-out 0.45s;
         opacity: ${({openNav}) => openNav ? '1' : '0'};
     }
     a:nth-of-type(3){
         transform: ${({openNav}) => openNav ? 'translateX(2rem);' : 'translateX(10rem);'};
-        transition-delay: 0.5s;
+        transition: all 0.5s ease-out 0.5s;
         opacity: ${({openNav}) => openNav ? '1' : '0'};
     }
     a:nth-of-type(4){
-        transform: ${({openNav}) => openNav ? 'translateX(-2rem);' : 'translateY(10rem);'};
+        transform: ${({openNav}) => openNav ? 'translateX(-0.5rem);' : 'translateY(10rem);'};
         border: 3px solid ${props => props.theme.colors.primary};
         opacity: ${({openNav}) => openNav ? '1' : '0'};
         padding: 0.5rem 1rem;
         text-align: center;
         border-radius: 4px;
-        transition-delay: 0.55s;
-        position: relative;
-        z-index: 200;
+        transition: all 0.5s ease-out 0.55s;
         color: ${props => props.theme.colors.primary};
         font-size: 2.5rem;
         font-weight: bold;
-        transition: all 0.2s ease-out;
 
         &:hover {
             background-color: ${props => props.theme.colors.primary};
@@ -251,14 +204,55 @@ export const MobileNav = styled.div`
         }      
     }
 `
+export const MenuBg = styled.div`
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100vh;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    opacity: 0.9;
+
+    span:nth-child(1) {
+        transition: height 0.7s ease 0s;
+        background-color: ${props => props.theme.colors.secondary};
+        height: ${({openNav}) => openNav ? '100vh' : '0'};
+    }
+    span:nth-child(2) {
+        transition: height 0.7s ease 0.3s;
+        background-color: ${props => props.theme.colors.secondary};
+        height: ${({openNav}) => openNav ? '100vh' : '0'};
+    }
+    span:nth-child(3){
+        transition: height 0.7s ease 0.6s;
+        background-color: ${props => props.theme.colors.secondary};
+        height: ${({openNav}) => openNav ? '100vh' : '0'}; 
+    }
+    span:nth-child(4){
+        transition: height 0.7s ease 0.9s;
+        background-color: ${props => props.theme.colors.secondary};
+        height: ${({openNav}) => openNav ? '100vh' : '0'};
+    }
+`
+
+export const MenuLinks = styled.div`
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 3rem;
+    text-align: right;
+`
 
 export const MobileNavLink = styled(Link)`
-    position: relative;
-    z-index: 200;
     color: ${props => props.theme.colors.primary};
     font-size: 2.5rem;
     font-weight: bold;
-    transition: all 0.2s ease-out;
 
     @media screen and (max-width: 425px) {
         font-size: 2rem;

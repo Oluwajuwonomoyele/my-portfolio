@@ -1,11 +1,11 @@
-import { Nav, NavContainer, LogoContainer, LogoImg, Logo, LogoSpan, LinksContainer, NavLink, MenuBar, MobileNav, MobileNavLink } from "./Navbar.styles";
+import { Nav, NavContainer, LogoContainer, LogoImg, Logo, LogoSpan, LinksContainer, NavLink, MenuBar, MobileNav, MobileNavLink, MenuBg, MenuLinks } from "./Navbar.styles";
 import logo from '../../assets/logo.png';
 import resume from '../../assets/Olutomisin Oluwajuwon Resume.pdf';
 import { animateScroll as scroll } from "react-scroll";
 
 const Navbar = ({openNav, setOpenNav, navScroll}) => {
     return ( 
-        <Nav navScroll={navScroll}>
+        <Nav navScroll={navScroll} openNav={openNav}>
             <NavContainer>
                 <LogoContainer onClick={() => scroll.scrollToTop()}>
                     <LogoImg src={logo} />
@@ -25,10 +25,18 @@ const Navbar = ({openNav, setOpenNav, navScroll}) => {
                     <div></div>
                 </MenuBar>
                 <MobileNav openNav={openNav}>
-                    <MobileNavLink to='projects' smooth={true} spy={true} duration={500} activeClass="active" offset={-120} onClick={() => setOpenNav(false)}>Projects</MobileNavLink>
-                    <MobileNavLink to='about' smooth={true} spy={true} duration={500} activeClass="active" offset={-120} onClick={() => setOpenNav(false)}>About Me</MobileNavLink>
-                    <MobileNavLink to='contact' smooth={true} spy={true} duration={500} activeClass="active" offset={-120} onClick={() => setOpenNav(false)}>Contact Me</MobileNavLink>
-                    <a href={resume} download onClick={() => setOpenNav(false)}>Resume</a>
+                    <MenuBg openNav={openNav}>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </MenuBg>
+                    <MenuLinks>
+                        <MobileNavLink to='projects' smooth={true} spy={true} duration={500} activeClass="active" offset={-120} onClick={() => setOpenNav(false)}>Projects</MobileNavLink>
+                        <MobileNavLink to='about' smooth={true} spy={true} duration={500} activeClass="active" offset={-120} onClick={() => setOpenNav(false)}>About Me</MobileNavLink>
+                        <MobileNavLink to='contact' smooth={true} spy={true} duration={500} activeClass="active" offset={-120} onClick={() => setOpenNav(false)}>Contact Me</MobileNavLink>
+                        <a href={resume} download onClick={() => setOpenNav(false)}>Resume</a>
+                    </MenuLinks>
                 </MobileNav>
             </NavContainer>
         </Nav>
