@@ -20,18 +20,18 @@ const Hero = () => {
                         />
                     </HeroHeader>
                     <HeroText>I am a frontend web developer based in Lagos, Nigeria able to develop responsive, user-friendly web application for all devices. From using CSS to implement frontend designs to utilizing frontend frameworks for optimal consumption of APIs, I make great web user interface experience for users.</HeroText>
-                    <HeroText2>Learn more <Link to='about' smooth={true} spy={true} duration={500} offset={-100}>about me</Link> or jump straight to <Link to='projects' smooth={true} spy={true} duration={500} offset={-100}>my work</Link>.</HeroText2>
+                    <HeroText2>Learn more <Link to='about' href="#" smooth={true} spy={true} duration={500} offset={-100}>about me</Link> or jump straight to <Link to='projects' href="#" smooth={true} spy={true} duration={500} offset={-100}>my work</Link>.</HeroText2>
                 </HeroContent>
             </HeroContainer>
             <ContactsContainer>
                 <Contacts>
-                    <a href="https://github.com/oluwajuwonomoyele">
+                    <a href="https://github.com/oluwajuwonomoyele" aria-label='Link to my github profile'>
                         <FiGithub />
                     </a>
-                    <a href="https://twitter.com/OlutomisinJuwon">
+                    <a href="https://twitter.com/OlutomisinJuwon" aria-label='Link to my twitter profile'>
                         <FiTwitter />
                     </a>
-                    <a href="https://www.linkedin.com/in/oluwajuwon-olutomisin/">
+                    <a href="https://www.linkedin.com/in/oluwajuwon-olutomisin/" aria-label='Link to my linkedin profile'>
                         <FiLinkedin />
                     </a>
                 </Contacts>
@@ -39,7 +39,7 @@ const Hero = () => {
             </ContactsContainer>
             <ContactsContainer2>
                 <Contacts>
-                    <a href="mailto:jolutomisin@gmail.com">
+                    <a href="mailto:jolutomisin@gmail.com" aria-label='Link to send me a mail'>
                         <FiMail />
                     </a>
                     <p>jolutomisin@gmail.com</p>

@@ -37,6 +37,8 @@ export const LogoContainer = styled.div`
 `
 export const LogoImg = styled.img`
     max-width: 40px;
+    width: 100%;
+    height: 100%;
 
     @media screen and (max-width: 600px) {
        max-width: 35px;

@@ -19,10 +19,10 @@ const ProjectDesign = ({project}) => {
                             <p key={index}>{lang}</p>
                         )})}</Lang>
                     <Links imgStart={project.imgStart}>
-                        <a href={project.githubLink} target='_blank' rel="noreferrer">
+                        <a href={project.githubLink} target='_blank' rel="noreferrer" aria-label={project.ariaLabelGit}>
                             <FiGithub />
                         </a>
-                        <a href={project.externalLink} target='_blank' rel="noreferrer">
+                        <a href={project.externalLink} target='_blank' rel="noreferrer" aria-label={project.ariaLabelExt}>
                             <FiExternalLink />
                         </a>
                     </Links>

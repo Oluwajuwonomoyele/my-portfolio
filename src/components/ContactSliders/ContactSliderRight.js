@@ -23,7 +23,7 @@ const ContactSliderRight = ({setIsRightOpen, isLeftOpen, setIsLeftOpen}) => {
                 <BarRight onClick={() => toggleSlideOut()}></BarRight>
             </BarContainerRight>
             <DetailsRight slideOut={slideOut} isLeftOpen={isLeftOpen}>
-                <a href="mailto:jolutomisin@gmail.com">
+                <a href="mailto:jolutomisin@gmail.com" aria-label='Link to send me a mail'>
                     <FiMail />
                 </a>
                 <p>Email Me!</p>

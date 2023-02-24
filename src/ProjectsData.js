@@ -16,7 +16,9 @@ const ProjectData = [
         externalLink: 'https://oo-blogr.vercel.app/',
         langs: ['ReactJS', 'TailwindCSS'],
         img: blogr,
-        imgStart: true
+        imgStart: true,
+        ariaLabelGit: 'Link to github repo for Blogr landing page',
+        ariaLabelExt: 'Link to live site for Blogr landing page'
     },
     {
         id: 2,
@@ -26,7 +28,9 @@ const ProjectData = [
         externalLink: 'https://oluwajuwonomoyele-todo-app.netlify.app/',
         langs: ['HTML', 'CSS', 'Javascript'],
         img: todo,
-        imgStart: false
+        imgStart: false,
+        ariaLabelGit: 'Link to github repo for Todo app',
+        ariaLabelExt: 'Link to live site for Todo app'
     },
     {
         id: 3,
@@ -36,7 +40,9 @@ const ProjectData = [
         externalLink: 'https://oo-peculiarhomes.vercel.app/',
         langs: ['ReactJS', 'TailwindCSS'],
         img: peculiarhomes,
-        imgStart: true
+        imgStart: true,
+        ariaLabelGit: 'Link to github repo for real estate web app',
+        ariaLabelExt: 'Link to live site for real estate web app'
     },
     {
         id: 4,
@@ -46,7 +52,9 @@ const ProjectData = [
         externalLink: 'https://github.com/Oluwajuwonomoyele/peculiar-financial-tracker',
         langs: ['ReactJS', "TailwindCSS", 'Firebase'],
         img: ft,
-        imgStart: false
+        imgStart: false,
+        ariaLabelGit: 'Link to github repo for finance tracker app',
+        ariaLabelExt: 'Link to live site for finance tracker app'
     },
     {
         id: 5,
@@ -56,7 +64,9 @@ const ProjectData = [
         externalLink: 'https://oluwajuwonomoyele.github.io/bookmark/',
         langs: ['HTML', 'TailwindCSS', 'Javascript'],
         img: bookmark,
-        imgStart: true
+        imgStart: true,
+        ariaLabelGit: 'Link to github repo for Bookmark landing page',
+        ariaLabelExt: 'Link to live site for Bookmark landing page'
     },
     {
         id: 6,
@@ -66,7 +76,9 @@ const ProjectData = [
         externalLink: 'https://oo-shortly.vercel.app/',
         langs: ['ReactJS', 'TailwindCSS', 'Firebase', 'API'],
         img: shortly,
-        imgStart: false
+        imgStart: false,
+        ariaLabelGit: 'Link to github repo for Shortly',
+        ariaLabelExt: 'Link to live site for Shortly'
     },
     {
         id: 7,
@@ -76,7 +88,9 @@ const ProjectData = [
         externalLink: 'https://oo-advice-generator-app.vercel.app/',
         langs: ['ReactJS', 'TailwindCSS', 'API'],
         img: AGA,
-        imgStart: true
+        imgStart: true,
+        ariaLabelGit: 'Link to github repo for Advice generator app',
+        ariaLabelExt: 'Link to live site for Advice generator app'
     },
 ]
 

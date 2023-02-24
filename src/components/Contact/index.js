@@ -20,11 +20,11 @@ const Contact = () => {
                         <p>Interested in working together? Or you have frontend related questions, feel free to hit me up and I'll get back to you as soon as I can. I'm currently AVAILABLE for any frontend projects.</p>
                     </div>
                     <div>
-                        <a href="mailto:jolutomisin@yahoo.com"><span>Hit Me Up</span> <MdDoubleArrow /></a>
+                        <a href="mailto:jolutomisin@yahoo.com" aria-label='Link to send me an email'><span>Hit Me Up</span> <MdDoubleArrow /></a>
                     </div>
 
                 </ContactContent>
-            </ContactContainer>
+            </ContactContainer> 
             <Acknowlodgment>
                 Designed and Built by Juwon Olutomisin
             </Acknowlodgment>

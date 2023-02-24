@@ -9,14 +9,14 @@ const Navbar = ({openNav, setOpenNav, navScroll}) => {
         <Nav navScroll={navScroll} openNav={openNav}>
             <NavContainer>
                 <LogoContainer onClick={() => scroll.scrollToTop()}>
-                    <LogoImg src={logo} />
+                    <LogoImg src={logo} alt='logo'/>
                     <Logo>JUWON <LogoSpan>OLUTOMISIN</LogoSpan>.</Logo>
                 </LogoContainer>
 
                 <LinksContainer>
-                    <NavLink to='projects' activeClass="active" smooth={true} spy={true} duration={500} offset={-100}>Projects</NavLink>
-                    <NavLink to='about' activeClass="active" smooth={true} spy={true} duration={500} offset={-100}>About Me</NavLink>
-                    <NavLink to='contact' activeClass="active" smooth={true} spy={true} duration={500} offset={-100}>Contact Me</NavLink>
+                    <NavLink to='projects' href="#" activeClass="active" smooth={true} spy={true} duration={500} offset={-100}>Projects</NavLink>
+                    <NavLink to='about' href="#" activeClass="active" smooth={true} spy={true} duration={500} offset={-100}>About Me</NavLink>
+                    <NavLink to='contact' href="#" activeClass="active" smooth={true} spy={true} duration={500} offset={-100}>Contact Me</NavLink>
                     <a href={resume} download >Resume</a>
                 </LinksContainer>
 
@@ -33,9 +33,9 @@ const Navbar = ({openNav, setOpenNav, navScroll}) => {
                         <span></span>
                     </MenuBg>
                     <MenuLinks>
-                        <MobileNavLink to='projects' smooth={true} spy={true} duration={500} activeClass="active" offset={-120} onClick={() => setOpenNav(false)}>Projects</MobileNavLink>
-                        <MobileNavLink to='about' smooth={true} spy={true} duration={500} activeClass="active" offset={-120} onClick={() => setOpenNav(false)}>About Me</MobileNavLink>
-                        <MobileNavLink to='contact' smooth={true} spy={true} duration={500} activeClass="active" offset={-120} onClick={() => setOpenNav(false)}>Contact Me</MobileNavLink>
+                        <MobileNavLink to='projects' href="#" smooth={true} spy={true} duration={500} activeClass="active" offset={-120} onClick={() => setOpenNav(false)}>Projects</MobileNavLink>
+                        <MobileNavLink to='about' href="#" smooth={true} spy={true} duration={500} activeClass="active" offset={-120} onClick={() => setOpenNav(false)}>About Me</MobileNavLink>
+                        <MobileNavLink to='contact' href="#" smooth={true} spy={true} duration={500} activeClass="active" offset={-120} onClick={() => setOpenNav(false)}>Contact Me</MobileNavLink>
                         <a href={resume} download onClick={() => setOpenNav(false)}>Resume</a>
                     </MenuLinks>
                 </MobileNav>
