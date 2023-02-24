@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const SliderOneContainer = styled.section`
     position: relative;
-    z-index: 2;
+    z-index: 10;
 
     @media screen and (min-width: 768px) {
         display: none;
@@ -14,6 +14,7 @@ export const BarContainer = styled.div`
     background-color: ${props => props.theme.colors.secondary};
     width: 5%;
     height: 9vh;
+    z-index: 15;
     left: 0;
     bottom: 5rem;
     border-top-right-radius: 4px;
@@ -67,7 +68,7 @@ export const Details = styled.div`
 `
 export const SliderTwoContainer = styled.section`
     position: relative;
-    z-index: 2;
+    z-index: 10;
 
     @media screen and (min-width: 768px) {
         display: none;
@@ -79,6 +80,7 @@ export const BarContainerRight = styled.div`
     background-color: ${props => props.theme.colors.secondary};
     width: 5%;
     height: 10vh;
+    z-index: 15;
     right: 0;
     bottom: 4.8rem;
     border-top-left-radius: 4px;

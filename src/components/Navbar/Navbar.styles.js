@@ -1,10 +1,9 @@
 import styled from "styled-components";
 import { Link } from "react-scroll";
-import navbg from '../../assets/navbg.gif';
 
 export const Nav = styled.nav`
      background-color: ${({navScroll}) => navScroll ? '#2c2b2b' : 'transparent' };
-     height: ${({navScroll, openNav}) => navScroll ? '80px' : navScroll && openNav ? '120px' : '100px' };
+     height: ${props => props.navScroll ? '80px' : props.navScroll && props.openNav ? '120px' : '100px' };
      display: flex;
      align-items: center;
      position: fixed;
@@ -162,34 +161,35 @@ export const MobileNav = styled.div`
     width: 100%;
     height: 100vh;
     z-index: 66;
+    visibility: ${({openNav}) => openNav ? 'visible' : 'hidden' };
 
     @media screen and (min-width: 790px) {
         display: none;
     }
 
     a:nth-of-type(1){
-        transform: ${({openNav}) => openNav ? 'translateX(2rem);' : 'translateX(10rem);'};
+        transform: ${({openNav}) => openNav ? 'translateX(25%);' : 'translateX(10rem);'};
         opacity: ${({openNav}) => openNav ? '1' : '0'};
         transition: all 0.5s ease-out 0.4s;
     }
     a:nth-of-type(2){
-        transform: ${({openNav}) => openNav ? 'translateX(-2rem);' : 'translateX(-10rem);'};
+        transform: ${({openNav}) => openNav ? 'translateX(-25%);' : 'translateX(-10rem);'};
         transition: all 0.5s ease-out 0.45s;
         opacity: ${({openNav}) => openNav ? '1' : '0'};
     }
     a:nth-of-type(3){
-        transform: ${({openNav}) => openNav ? 'translateX(2rem);' : 'translateX(10rem);'};
+        transform: ${({openNav}) => openNav ? 'translateX(25%);' : 'translateX(10rem);'};
         transition: all 0.5s ease-out 0.5s;
         opacity: ${({openNav}) => openNav ? '1' : '0'};
     }
     a:nth-of-type(4){
-        transform: ${({openNav}) => openNav ? 'translateX(-0.5rem);' : 'translateY(10rem);'};
+        transform: ${({openNav}) => openNav ? 'translateX(5%);' : 'translateY(10rem);'};
         border: 3px solid ${props => props.theme.colors.primary};
         opacity: ${({openNav}) => openNav ? '1' : '0'};
         padding: 0.5rem 1rem;
         text-align: center;
         border-radius: 4px;
-        transition: all 0.5s ease-out 0.55s;
+        transition: all 0.5s ease-out 0.6s;
         color: ${props => props.theme.colors.primary};
         font-size: 2.5rem;
         font-weight: bold;

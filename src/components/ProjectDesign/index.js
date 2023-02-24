@@ -14,9 +14,9 @@ const ProjectDesign = ({project}) => {
                 </div>
                 <Desc>{project.description}</Desc>
                 <LLDiv>
-                    <Lang imgStart={project.imgStart}>{project.langs.map(lang => {
+                    <Lang imgStart={project.imgStart}>{project.langs.map((lang, index) => {
                         return (
-                            <p>{lang}</p>
+                            <p key={index}>{lang}</p>
                         )})}</Lang>
                     <Links imgStart={project.imgStart}>
                         <a href={project.githubLink} target='_blank' rel="noreferrer">

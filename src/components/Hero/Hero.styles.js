@@ -46,13 +46,13 @@ export const HeroContent = styled.div`
 `
 const flow = keyframes`
     0% {
-        background-position: 51% 0%
+        background-position: 50% 0%
     }
     50% {
         background-position: 20% 100%
     }
     70% {
-        background-position: 51% 0%
+        background-position: 50% 0%
     }
     100% {
         background-position: 0% 0%; 
@@ -65,7 +65,7 @@ export const HeroHeader = styled.h1`
     background-clip: text;
     background-image: linear-gradient( 45deg, #ffc5ad, #fb9a69, #F5C2A9, #E87435 );
     background-size: 100% 400%;
-    animation: ${flow} infinite 15s linear alternate forwards;
+    animation: ${flow} infinite 20s linear alternate forwards;
 
     @media screen and (max-width: 425px) {
         font-size: 3rem;

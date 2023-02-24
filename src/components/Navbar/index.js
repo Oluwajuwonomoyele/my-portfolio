@@ -4,6 +4,7 @@ import resume from '../../assets/Olutomisin Oluwajuwon Resume.pdf';
 import { animateScroll as scroll } from "react-scroll";
 
 const Navbar = ({openNav, setOpenNav, navScroll}) => {
+
     return ( 
         <Nav navScroll={navScroll} openNav={openNav}>
             <NavContainer>
