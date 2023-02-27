@@ -1,5 +1,5 @@
 import { Nav, NavContainer, LogoContainer, LogoImg, Logo, LogoSpan, LinksContainer, NavLink, MenuBar, MobileNav, MobileNavLink, MenuBg, MenuLinks } from "./Navbar.styles";
-import logo from '../../assets/logo.png';
+import logo from '../../assets/logo.webp';
 import resume from '../../assets/Olutomisin Oluwajuwon Resume.pdf';
 import { animateScroll as scroll } from "react-scroll";
 
@@ -32,7 +32,7 @@ const Navbar = ({openNav, setOpenNav, navScroll}) => {
                         <span></span>
                         <span></span>
                     </MenuBg>
-                    <MenuLinks>
+                    <MenuLinks openNav={openNav}>
                         <MobileNavLink to='projects' href="#" smooth={true} spy={true} duration={500} activeClass="active" offset={-120} onClick={() => setOpenNav(false)}>Projects</MobileNavLink>
                         <MobileNavLink to='about' href="#" smooth={true} spy={true} duration={500} activeClass="active" offset={-120} onClick={() => setOpenNav(false)}>About Me</MobileNavLink>
                         <MobileNavLink to='contact' href="#" smooth={true} spy={true} duration={500} activeClass="active" offset={-120} onClick={() => setOpenNav(false)}>Contact Me</MobileNavLink>

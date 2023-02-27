@@ -160,17 +160,18 @@ export const MenuBar = styled.div`
 export const MobileNav = styled.div`
     position: fixed;
     inset: 0;
-    width: 100%;
-    height: 100vh;
+    width:  100%;
+    height: ${({openNav}) => openNav ? '100vh' : '0'};
     z-index: 66;
-    visibility: ${({openNav}) => openNav ? 'visible' : 'hidden' };
+    transition: all 0.7s ease;
+
 
     @media screen and (min-width: 790px) {
         display: none;
     }
 
     a:nth-of-type(1){
-        transform: ${({openNav}) => openNav ? 'translateX(25%);' : 'translateX(10rem);'};
+        transform: ${({openNav}) => openNav ? 'translateX(25%)' : 'translateX(10rem)'};
         opacity: ${({openNav}) => openNav ? '1' : '0'};
         transition: all 0.5s ease-out 0.4s;
     }
@@ -213,7 +214,6 @@ export const MenuBg = styled.div`
     right: 0;
     bottom: 0;
     width: 100%;
-    height: 100vh;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     opacity: 0.9;
@@ -221,28 +221,33 @@ export const MenuBg = styled.div`
     span:nth-child(1) {
         transition: height 0.7s ease 0s;
         background-color: ${props => props.theme.colors.secondary};
-        height: ${({openNav}) => openNav ? '100vh' : '0'};
+        height: ${({openNav}) => openNav ? '100vh' : '0px'};
+        display: block;
     }
     span:nth-child(2) {
         transition: height 0.7s ease 0.3s;
         background-color: ${props => props.theme.colors.secondary};
-        height: ${({openNav}) => openNav ? '100vh' : '0'};
+        height: ${({openNav}) => openNav ? '100vh' : '0px'};
+        display: block;
     }
     span:nth-child(3){
         transition: height 0.7s ease 0.6s;
         background-color: ${props => props.theme.colors.secondary};
-        height: ${({openNav}) => openNav ? '100vh' : '0'}; 
+        height: ${({openNav}) => openNav ? '100vh' : '0px'};
+        display: block;
     }
     span:nth-child(4){
         transition: height 0.7s ease 0.9s;
         background-color: ${props => props.theme.colors.secondary};
-        height: ${({openNav}) => openNav ? '100vh' : '0'};
+        height: ${({openNav}) => openNav ? '100vh' : '0px'};
+        display: block;
     }
 `
 
 export const MenuLinks = styled.div`
+    position: fixed;
     width: 100%;
-    height: 100vh;
+    height:  100vh;
     display: flex;
     flex-direction: column;
     align-items: center;

@@ -1,10 +1,10 @@
-import blogr from './assets/Blogr.png'
-import todo from './assets/Todo app.png'
-import peculiarhomes from './assets/peculiarhomes.png'
-import ft from './assets/Financial Tracker.png'
-import bookmark from './assets/Bookmark.png'
-import shortly from './assets/Shortly.png'
-import AGA from './assets/Advice generator app.png'
+import blogr from './assets/Blogr.webp'
+import todo from './assets/Todo app.webp'
+import peculiarhomes from './assets/peculiarhomes.webp'
+import ft from './assets/Financial Tracker.webp'
+import bookmark from './assets/Bookmark.webp'
+import shortly from './assets/Shortly.webp'
+import AGA from './assets/Advice generator app.webp'
 
 
 const ProjectData = [
