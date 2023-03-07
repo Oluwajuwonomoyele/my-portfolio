@@ -1,17 +1,17 @@
-import styled from "styled-components";
+import styled, {css} from "styled-components";
 import { Link } from "react-scroll";
 
 export const Nav = styled.nav`
-     background-color: ${({navScroll}) => navScroll ? '#2c2b2b' : 'transparent' };
-     height: ${props => props.navScroll ? '80px' : props.navScroll && props.openNav ? '120px' : '100px' };
-     display: flex;
-     align-items: center;
-     position: fixed;
-     width: 100%;
-     z-index: 19;
-     filter: ${({navScroll, openNav}) => navScroll ? 'drop-shadow(0px 1px 2px #ffc5ad)': navScroll && openNav ? '' : '' };
-     transition: all 0.3s ease;
-     
+    background-color: ${({navScroll}) => navScroll ? '#2c2b2b' : 'transparent' };
+    height: ${({navScroll, openNav}) => (navScroll && !openNav && css`80px`) || (navScroll && openNav && css`
+    100px`) || (!navScroll && !openNav && css`100px`)};
+    display: flex;
+    align-items: center;
+    position: fixed;
+    width: 100%;
+    z-index: 19;
+    box-shadow: ${({navScroll, openNav}) => (navScroll && !openNav && css`0px 1px 3px #ffc5ad`) || (navScroll && openNav && css``) || (!navScroll && !openNav && css``)};
+    transition: all 0.5s ease;
 `
 export const NavContainer = styled.div`
     height: 100px;
@@ -186,13 +186,13 @@ export const MobileNav = styled.div`
         opacity: ${({openNav}) => openNav ? '1' : '0'};
     }
     a:nth-of-type(4){
-        transform: ${({openNav}) => openNav ? 'translateX(5%);' : 'translateY(10rem);'};
+        transform: ${({openNav}) => openNav ? 'translateX(5%);' : 'translateY(2rem);'};
         border: 3px solid ${props => props.theme.colors.primary};
         opacity: ${({openNav}) => openNav ? '1' : '0'};
         padding: 0.5rem 1rem;
         text-align: center;
         border-radius: 4px;
-        transition: all 0.5s ease-out 0.6s;
+        transition: all 0.5s ease-out 0.7s;
         color: ${props => props.theme.colors.primary};
         font-size: 2.5rem;
         font-weight: bold;
@@ -214,9 +214,11 @@ export const MenuBg = styled.div`
     right: 0;
     bottom: 0;
     width: 100%;
+    height: ${({openNav}) => openNav ? '100vh' : '0px'};
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     opacity: 0.9;
+    transition: height 0.3s ease 0.9s;
 
     span:nth-child(1) {
         transition: height 0.7s ease 0s;
@@ -247,13 +249,15 @@ export const MenuBg = styled.div`
 export const MenuLinks = styled.div`
     position: fixed;
     width: 100%;
-    height:  100vh;
+    height:  ${({openNav}) => openNav ? '100vh' : '0px'};
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     gap: 3rem;
     text-align: right;
+    transition: height 0.5s ease 0.5s;
+    overflow: hidden;
 `
 
 export const MobileNavLink = styled(Link)`
