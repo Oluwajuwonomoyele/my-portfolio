@@ -3,7 +3,7 @@ import { ThemeProvider } from "styled-components";
 import ScrollToTop from "./ScrollToTop";
 import AnimatedCursor from 'react-animated-cursor';
 import Home from "./pages/Home";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Preloader from "./components/Preloader";
 
 function App() {
@@ -18,9 +18,11 @@ function App() {
 
   const [ pageLoaded, setPageLoaded ] = useState(false)
 
-  setTimeout(() => {
-    setPageLoaded(true)
-  }, 4700)
+  useEffect(() => {
+    setTimeout(() => {
+      setPageLoaded(true)
+    }, 4700)
+  }, [])
 
   return (
     <Router>

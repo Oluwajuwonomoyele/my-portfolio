@@ -19,6 +19,7 @@ export const HeroContainer = styled.div`
     display: flex;
     align-items: center;
     gap: 4rem;
+    position: relative;
 
     @media screen and (max-width: 768px) {
         flex-direction: column;
@@ -167,4 +168,109 @@ export const Line = styled.div`
     width: 2px;
     height: 100px;
     background-color: ${props => props.theme.colors.primary};
+`
+export const Scroll = styled.div`
+    position: absolute;
+    right: 8%;
+    bottom: 10%;
+
+    @media screen and (max-width: 425px) {
+        position: relative;
+        right: 0;
+        top: 0;
+        align-self: center;
+    }
+
+`
+export const ScrollContainer = styled.div`
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+`
+
+export const Lining = styled.div`
+    height: 140px;
+    background-color:${props => props.theme.colors.primary2};
+    width: 1px;
+    border-radius: 20px;
+    position: relative;
+`
+const osci = keyframes`
+ 0% {
+    top: 0;
+ }
+ 100% {
+    top: 57%;
+ }
+`
+
+export const Bolt = styled.div`
+    position: absolute;
+    width: 3px;
+    max-width: 3px;
+    height: 60px;
+    top: 0;
+    margin: 0 auto;
+    background-color: ${props => props.theme.colors.primary};
+    border-radius: 20px;
+    animation: ${osci} 2.5s infinite;
+`
+const first = keyframes`
+    0%{
+        stroke: #ffc5ad;
+    }
+    30% {
+        stroke: #fb9a69;
+    }
+    70%{
+        stroke: #F5C2A9;
+    }
+    100%{
+        stroke: #ffc5ad;
+    }
+`
+const second = keyframes`
+    0%{
+        stroke: #fb9a69;
+    }
+    30% {
+        stroke: #ffc5ad;
+    }
+    70%{
+        stroke: #F5C2A9;
+    }
+    100%{
+        stroke: #fb9a69;
+    }
+`
+const third = keyframes`
+    0%{
+        stroke: #ffc5ad;
+    }
+    30% {
+        stroke: #ffc5ad;
+    }
+    70%{
+        stroke: #fb9a69;
+    }
+    100%{
+        stroke: #F5C2A9;
+    }
+`
+export const Arrows = styled.div`
+    display: flex;
+    flex-direction: column;
+
+    svg:nth-of-type(1){
+        animation: ${first} 3s infinite;
+    }
+    svg:nth-of-type(2){
+        animation: ${second} 3s infinite;
+    }
+    svg:nth-of-type(3){
+        animation: ${third} 3s infinite;
+    }
+
 `
