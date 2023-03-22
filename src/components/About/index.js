@@ -5,14 +5,14 @@ const About = () => {
     return (  
         <AboutSection name='about'>
             <AboutContainer>
-                <AboutHeader>
+                <AboutHeader data-aos='fade-right'>
                     <div>
                         <h1>Get To Know Me</h1>
                         <h2>About Me</h2>
                     </div>
                     <div></div>
                 </AboutHeader>
-                <AboutContent>
+                <AboutContent data-aos='fade-up' data-aos-delay='400'>
                     <p>Hello again!😎 Thanks for scrolling this far!! Yes as you already know I am a frontend web developer, I started my coding journey about two years ago and I'm grateful for how far I've come and enthusiastic about the future. 
                     Other than coding, I am currently a student of the University of Lagos, Nigeria majoring in Bachelor of Science in Mathematics. I enjoy lots of music and movies, also feel free to reach out to me with book recommendations (doesn't necessarily have to be about coding).
                     </p>

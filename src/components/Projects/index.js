@@ -6,7 +6,7 @@ const Projects = () => {
     return (  
         <ProjectsSection name='projects'>
             <ProjectsContainer>
-                <ProjectsHeader>
+                <ProjectsHeader data-aos='fade-right'>
                     <div>
                         <h1>Some Designs I've Implemented</h1>
                         <h2>Selected</h2>

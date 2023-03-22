@@ -5,6 +5,8 @@ import AnimatedCursor from 'react-animated-cursor';
 import Home from "./pages/Home";
 import { useState, useEffect } from "react";
 import Preloader from "./components/Preloader";
+import AOS from "aos";
+import 'aos/dist/aos.css'
 
 function App() {
   const theme = {
@@ -22,6 +24,8 @@ function App() {
     setTimeout(() => {
       setPageLoaded(true)
     }, 4700)
+
+    AOS.init({duration: 1500})
   }, [])
 
   return (

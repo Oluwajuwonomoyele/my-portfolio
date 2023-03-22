@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled, {keyframes} from "styled-components";
 
 export const SliderOneContainer = styled.section`
     position: relative;
@@ -20,11 +20,10 @@ export const BarContainer = styled.div`
     border-top-right-radius: 4px;
     border-bottom-right-radius: 4px;
 `
-
 export const Bar = styled.div`
-    position: fixed;
+    position: absolute;
     background-color: ${props => props.theme.colors.primary};
-    width: 0.2rem;
+    width: 0.5rem;
     height: 9vh;
     cursor: pointer;
     transition: all 0.3s ease;
@@ -34,7 +33,7 @@ export const Bar = styled.div`
 
     &:hover {
         transition: width 0.3s;
-        width: 0.5rem;
+        width: 0.2rem;
     }
 `
 
@@ -90,7 +89,7 @@ export const BarContainerRight = styled.div`
 export const BarRight = styled.div`
     position: fixed;
     background-color: ${props => props.theme.colors.primary};
-    width: 0.2rem;
+    width: 0.5rem;
     height: 10vh;
     cursor: pointer;
     transition: all 0.3s ease;
@@ -100,7 +99,7 @@ export const BarRight = styled.div`
 
     &:hover {
         transition: width 0.3s;
-        width: 0.5rem;
+        width: 0.2rem;
     }
 `
 

@@ -103,6 +103,5 @@ export const Skill = styled.div`
     &:hover {
         border-color: ${props => props.theme.colors.primary2};
         color: ${props => props.theme.colors.primary2};
-        transform: translateY(-5px) rotate(3deg);
     }
 `
