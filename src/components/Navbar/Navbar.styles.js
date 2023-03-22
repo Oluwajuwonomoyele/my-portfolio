@@ -129,7 +129,7 @@ export const MenuBar = styled.div`
     @media screen and (min-width: 790px) {
         display: none;
     }
-    @media screen and (max-width: 425px) {
+    @media screen and (max-width: 768px) {
        transform: scale(0.8);
     }
 
@@ -264,6 +264,29 @@ export const MobileNavLink = styled(Link)`
     color: ${props => props.theme.colors.primary};
     font-size: 2.5rem;
     font-weight: bold;
+    position: relative;
+
+    &.active::before {
+        content: '';
+        background-color: ${props => props.theme.colors.primary};
+        width: 8px;
+        height: 8px;
+        border-radius: 50%;
+        position: absolute;
+        left: -15%;
+        top: 50%;
+    }
+
+    &.active::after {
+        content: '';
+        background-color: ${props => props.theme.colors.primary};
+        width: 8px;
+        height: 8px;
+        border-radius: 50%;
+        position: absolute;
+        right: -15%;
+        top: 50%;
+    }
 
     @media screen and (max-width: 425px) {
         font-size: 2rem;

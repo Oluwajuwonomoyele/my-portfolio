@@ -67,18 +67,14 @@ export const AboutContent = styled.div`
        padding: 4rem 0;
     }
 
-    @media screen and (max-width: 425px) {
+    @media screen and (max-width: 768px) {
         text-align: center;
     }      
 
     p {
-        font-size: 1.3rem;
+        font-size: 1.2rem;
         color: ${props => props.theme.colors.white};
         line-height: 3rem;   
-
-        @media screen and (max-width: 425px) {
-            font-size: 1.2rem;
-        }      
     }
 
     img {

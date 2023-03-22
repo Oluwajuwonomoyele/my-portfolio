@@ -174,7 +174,7 @@ export const Scroll = styled.div`
     right: 8%;
     bottom: 10%;
 
-    @media screen and (max-width: 425px) {
+    @media screen and (max-width: 768px) {
         position: relative;
         right: 0;
         top: 0;

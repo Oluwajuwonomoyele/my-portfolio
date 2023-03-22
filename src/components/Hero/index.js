@@ -9,7 +9,7 @@ const Hero = () => {
         <HeroSection>
             <HeroContainer>
                 <HeroImgContainer>
-                    <HeroImg src={img} />
+                    <HeroImg src={img} loading='lazy'/>
                 </HeroImgContainer>
 
                 <HeroContent>
@@ -19,7 +19,7 @@ const Hero = () => {
                         typeSpeed={80}
                         />
                     </HeroHeader>
-                    <HeroText>I am a frontend web developer based in Lagos, Nigeria able to develop responsive, user-friendly web application for all devices. From using CSS to implement frontend designs to utilizing frontend frameworks for optimal consumption of APIs, I make great web user interface experience for users.</HeroText>
+                    <HeroText>I am a frontend web developer based in Lagos, Nigeria able to develop responsive, user-friendly web application for all devices. From using CSS to implement frontend designs to utilizing frontend frameworks for optimal consumption of APIs, I make great web user interface ensuring the most awesome experience for users.</HeroText>
                     <HeroText2>Learn more <Link to='about' href="#" smooth={true} spy={true} duration={500} offset={-100}>about me</Link> or jump straight to <Link to='projects' href="#" smooth={true} spy={true} duration={500} offset={-100}>my work</Link>.</HeroText2>
                 </HeroContent>
 

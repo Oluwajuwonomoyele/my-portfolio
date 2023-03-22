@@ -11,7 +11,7 @@ const ProjectData = [
     {
         id: 1,
         projectName: 'Blogr Landing Page',
-        description: 'This was a project I hoped while still at the early stages of my frontend devlopmnent journey, the design was picked from a challenge by a popular frontend design guide - FrontendMentor. I ensured responsiveness on majority of devices and also learnt quite alot while on the challenge.',
+        description: 'This was a project I hopped while still at the early stages of my frontend devlopmnent journey, the design was picked from a challenge by a popular frontend design guide - FrontendMentor. I ensured responsiveness on majority of devices and also learnt quite alot while on the challenge.',
         githubLink: 'https://github.com/Oluwajuwonomoyele/blogr',
         externalLink: 'https://oo-blogr.vercel.app/',
         langs: ['ReactJS', 'TailwindCSS'],
@@ -71,7 +71,7 @@ const ProjectData = [
     {
         id: 6,
         projectName: 'Shortly Link Shortner',
-        description: "Wow!, One of the best and tasking projects I've worked on, this app shortens any link a user inputs and also allows the user to be able to copy the shortened link. Of course, firebase for user authenication😁.",
+        description: "Wow!, One of my best and tasking projects yet, this app shortens any link a user inputs and also allows the user to be able to copy the shortened link. Of course, firebase for user authenication😉.",
         githubLink: 'https://github.com/Oluwajuwonomoyele/shortly',
         externalLink: 'https://oo-shortly.vercel.app/',
         langs: ['ReactJS', 'TailwindCSS', 'Firebase', 'API'],

@@ -11,7 +11,7 @@ export const ProjectsContainer = styled.div`
         padding: 4rem;
     }
     @media screen and (max-width: 425px) {
-        padding: 2rem;
+        padding: 0 2rem 2rem 2rem;
     }      
 `
 export const ProjectsHeader = styled.div`

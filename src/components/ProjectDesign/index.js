@@ -5,7 +5,7 @@ const ProjectDesign = ({project}) => {
     return (  
         <ProjectDesignSection>
             <ImgDiv imgStart={project.imgStart}>
-                <img src={project.img} alt='project'/>
+                <img src={project.img} alt='project' loading='lazy'/>
             </ImgDiv>
             <ContentDiv imgStart={project.imgStart}>
                 <div>
