@@ -171,22 +171,22 @@ export const MobileNav = styled.div`
     }
 
     a:nth-of-type(1){
-        transform: ${({openNav}) => openNav ? 'translateX(25%)' : 'translateX(10rem)'};
+        transform: ${({openNav}) => openNav ? 'translateX(36%)' : 'translateX(10rem)'};
         opacity: ${({openNav}) => openNav ? '1' : '0'};
         transition: all 0.5s ease-out 0.4s;
     }
     a:nth-of-type(2){
-        transform: ${({openNav}) => openNav ? 'translateX(-25%);' : 'translateX(-10rem);'};
+        transform: ${({openNav}) => openNav ? 'translateX(-30%);' : 'translateX(-10rem);'};
         transition: all 0.5s ease-out 0.45s;
         opacity: ${({openNav}) => openNav ? '1' : '0'};
     }
     a:nth-of-type(3){
-        transform: ${({openNav}) => openNav ? 'translateX(25%);' : 'translateX(10rem);'};
+        transform: ${({openNav}) => openNav ? 'translateX(26%);' : 'translateX(10rem);'};
         transition: all 0.5s ease-out 0.5s;
         opacity: ${({openNav}) => openNav ? '1' : '0'};
     }
     a:nth-of-type(4){
-        transform: ${({openNav}) => openNav ? 'translateX(5%);' : 'translateY(2rem);'};
+        transform: ${({openNav}) => openNav ? 'translateX(-22%);' : 'translate(-22%, 2rem) ;'};
         border: 3px solid ${props => props.theme.colors.primary};
         opacity: ${({openNav}) => openNav ? '1' : '0'};
         padding: 0.5rem 1rem;
@@ -256,7 +256,7 @@ export const MenuLinks = styled.div`
     justify-content: center;
     gap: 3rem;
     text-align: right;
-    transition: height 0.5s ease 0.5s;
+    transition: height 0.5s ease 0.3s;
     overflow: hidden;
 `
 
