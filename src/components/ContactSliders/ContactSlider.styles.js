@@ -20,6 +20,18 @@ export const BarContainer = styled.div`
     border-top-right-radius: 4px;
     border-bottom-right-radius: 4px;
 `
+const ping = keyframes`
+    0% {
+        opacity: 0.5;
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0.5;
+    }
+`
+
 export const Bar = styled.div`
     position: absolute;
     background-color: ${props => props.theme.colors.primary};
@@ -30,6 +42,7 @@ export const Bar = styled.div`
     box-sizing: content-box;
     left: 12px;
     border-radius: 4px;
+    animation: ${ping} 3s infinite;
 
     &:hover {
         transition: width 0.3s;
@@ -87,7 +100,7 @@ export const BarContainerRight = styled.div`
 `
 
 export const BarRight = styled.div`
-    position: fixed;
+    position: absolute;
     background-color: ${props => props.theme.colors.primary};
     width: 0.5rem;
     height: 10vh;
@@ -96,6 +109,7 @@ export const BarRight = styled.div`
     box-sizing: content-box;
     right: 12px;
     border-radius: 4px;
+    animation: ${ping} 3s infinite 1s;
 
     &:hover {
         transition: width 0.3s;

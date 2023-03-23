@@ -162,7 +162,7 @@ export const MobileNav = styled.div`
     inset: 0;
     width:  100%;
     height: ${({openNav}) => openNav ? '100vh' : '0'};
-    z-index: 66;
+    z-index: 100;
     transition: all 0.7s ease;
 
 

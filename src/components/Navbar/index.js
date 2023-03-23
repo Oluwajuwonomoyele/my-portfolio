@@ -2,8 +2,17 @@ import { Nav, NavContainer, LogoContainer, LogoImg, Logo, LogoSpan, LinksContain
 import logo from '../../assets/logo.webp';
 import resume from '../../assets/Olutomisin Oluwajuwon Resume.pdf';
 import { animateScroll as scroll } from "react-scroll";
+import { useEffect } from "react";
 
 const Navbar = ({openNav, setOpenNav, navScroll}) => {
+
+    useEffect(() => {
+        if(openNav){
+            document.body.style.overflow = 'hidden'
+        }else {
+            document.body.style.overflow= 'unset'
+        }
+    }, [openNav])
 
     return ( 
         <Nav navScroll={navScroll} openNav={openNav}>
