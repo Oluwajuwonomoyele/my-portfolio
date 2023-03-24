@@ -9,7 +9,7 @@ export const AboutContainer = styled.div`
     margin: 0 auto;
     padding: 4rem 10rem; 
 
-    @media screen and (max-width: 768px) {
+    @media screen and (max-width: 1024px) {
         padding: 4rem;
     }
     @media screen and (max-width: 425px) {
@@ -61,13 +61,13 @@ export const AboutContent = styled.div`
     align-items: center;
     gap: 3rem;
 
-    @media screen and (max-width: 768px) {
+    @media screen and (max-width: 1024px) {
        display: flex;
        flex-direction: column-reverse;
        padding: 4rem 0;
     }
 
-    @media screen and (max-width: 768px) {
+    @media screen and (max-width: 1024px) {
         text-align: center;
     }      
 
@@ -82,7 +82,7 @@ export const AboutContent = styled.div`
         width: 100%;
         height: 100%;
          
-        @media screen and (max-width: 768px) {
+        @media screen and (max-width: 1024px) {
             max-width: 20rem;
         }
         @media screen and (max-width: 370px) {

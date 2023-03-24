@@ -53,7 +53,7 @@ export const Logo = styled.h1`
     @media screen and (max-width: 600px) {
        font-size: 1rem;
     }
-    @media screen and (max-width: 425px) {
+    @media screen and (max-width: 1024px) {
        display: none;
     }
 `
@@ -73,7 +73,7 @@ export const LinksContainer = styled.div`
     gap: 4rem;  
     align-items: center;
 
-    @media screen and (max-width: 768px) {
+    @media screen and (max-width: 1024px) {
         display: none;
     }
 
@@ -126,10 +126,10 @@ export const MenuBar = styled.div`
     z-index: 999;
     transform: ${({openNav}) => openNav ? 'rotate(360deg)' : 'rotate(0deg)'};
 
-    @media screen and (min-width: 790px) {
+    @media screen and (min-width: 1025px) {
         display: none;
     }
-    @media screen and (max-width: 768px) {
+    @media screen and (max-width: 1024px) {
        transform: scale(0.8);
     }
 
@@ -166,7 +166,7 @@ export const MobileNav = styled.div`
     transition: all 0.7s ease;
 
 
-    @media screen and (min-width: 790px) {
+    @media screen and (min-width: 1025px) {
         display: none;
     }
 

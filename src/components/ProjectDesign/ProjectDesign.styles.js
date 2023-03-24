@@ -11,6 +11,9 @@ export const ProjectDesignSection = styled.div`
        border-radius: 20px;
        overflow: hidden;
     }
+    @media screen and (max-width: 1024px) {
+        padding: 4rem 0;
+    }
     @media screen and (max-width: 425px) {
        padding: 2rem 0;
     }
@@ -23,7 +26,7 @@ export const ImgDiv = styled.div`
     grid-area: ${({imgStart}) => imgStart ? '1 / 1 / -1 / 8' : '1 / 6 / -1 / 13'};
     z-index: 3;
 
-    @media screen and (max-width: 768px) {
+    @media screen and (max-width: 1024px) {
        grid-column: 1 / -1;
        height: 100%;
 
@@ -45,13 +48,18 @@ export const ImgDiv = styled.div`
         border-radius: 5px;
         overflow: hidden;
 
-        @media screen and (max-width: 768px) {
+        @media screen and (max-width: 1024px) {
             opacity: 0.9;
             background-color: ${props => props.theme.colors.secondary};
         }
     }
     &:hover::after {
         background-color: transparent;
+
+        @media screen and (max-width: 1024px) {
+            opacity: 0.9;
+            background-color: ${props => props.theme.colors.secondary};
+        }
     }
     img {
         width: 100%;
@@ -68,7 +76,7 @@ export const ContentDiv = styled.div`
     position: relative;
     z-index: 4;
 
-    @media screen and (max-width: 768px) {
+    @media screen and (max-width: 1024px) {
        grid-column: 1 / -1;
        padding: 3rem 2rem;
     }
@@ -94,7 +102,7 @@ export const Desc = styled.div`
     line-height: 1.7rem;
     z-index: 6;
 
-    @media screen and (max-width: 768px) {
+    @media screen and (max-width: 1024px) {
        box-shadow: none;
        background: transparent;
        padding: 0;
@@ -118,7 +126,7 @@ export const Lang = styled.div`
     gap: 0.5rem;
     flex-wrap: wrap;
 
-    @media screen and (max-width: 768px) {
+    @media screen and (max-width: 1024px) {
        p {
         background-color: ${props => props.theme.colors.secondary};
         border: 1.5px solid ${props => props.theme.colors.primary};

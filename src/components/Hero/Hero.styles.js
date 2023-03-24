@@ -7,7 +7,7 @@ export const HeroSection = styled.section`
     padding-top: 80px;
     transition: padding 0.5s ease;
 
-    @media screen and (max-width: 768px) {
+    @media screen and (max-width: 1024px) {
         height: auto;
     }
 
@@ -21,7 +21,7 @@ export const HeroContainer = styled.div`
     gap: 4rem;
     position: relative;
 
-    @media screen and (max-width: 768px) {
+    @media screen and (max-width: 1024px) {
         flex-direction: column;
         align-items: flex-start;
         padding: 4rem;
@@ -32,7 +32,7 @@ export const HeroContainer = styled.div`
     }      
 `
 export const HeroImgContainer = styled.div`
-     @media screen and (max-width: 768px) {
+     @media screen and (max-width: 1024px) {
         display: none;
     }
 
@@ -123,7 +123,7 @@ export const ContactsContainer = styled.div`
     align-items: center;
     gap: 1rem;
 
-    @media screen and (max-width: 768px) {
+    @media screen and (max-width: 1024px) {
         display: none;
     }
 `
@@ -137,7 +137,7 @@ export const ContactsContainer2 = styled.div`
     align-items: center;
     gap: 1rem;
 
-    @media screen and (max-width: 768px) {
+    @media screen and (max-width: 1024px) {
         display: none;
     }
 `
@@ -174,7 +174,7 @@ export const Scroll = styled.div`
     right: 8%;
     bottom: 10%;
 
-    @media screen and (max-width: 768px) {
+    @media screen and (max-width: 1024px) {
         position: relative;
         right: 0;
         top: 0;

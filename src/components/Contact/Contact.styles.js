@@ -8,7 +8,7 @@ export const ContactContainer = styled.div`
     margin: 0 auto;
     padding: 4rem 10rem; 
 
-    @media screen and (max-width: 768px) {
+    @media screen and (max-width: 1024px) {
         padding: 4rem;
     }
 
@@ -35,6 +35,9 @@ export const ContactHeader = styled.div`
         color: ${props => props.theme.colors.primary};
         opacity: 0.3;
 
+        @media screen and (max-width: 1024px) {
+            font-size: 5rem;
+        }
         @media screen and (max-width: 425px) {
             font-size: 3rem;
             line-height: normal;

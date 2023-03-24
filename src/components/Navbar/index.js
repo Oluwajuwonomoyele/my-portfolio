@@ -1,5 +1,5 @@
 import { Nav, NavContainer, LogoContainer, LogoImg, Logo, LogoSpan, LinksContainer, NavLink, MenuBar, MobileNav, MobileNavLink, MenuBg, MenuLinks } from "./Navbar.styles";
-import logo from '../../assets/logo.webp';
+import logo from '../../assets/logo.png';
 import resume from '../../assets/Olutomisin Oluwajuwon Resume.pdf';
 import { animateScroll as scroll } from "react-scroll";
 import { useEffect } from "react";

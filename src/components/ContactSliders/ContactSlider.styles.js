@@ -4,7 +4,7 @@ export const SliderOneContainer = styled.section`
     position: relative;
     z-index: 10;
 
-    @media screen and (min-width: 768px) {
+    @media screen and (min-width: 1025px) {
         display: none;
     }
 `
@@ -82,7 +82,7 @@ export const SliderTwoContainer = styled.section`
     position: relative;
     z-index: 10;
 
-    @media screen and (min-width: 768px) {
+    @media screen and (min-width: 1025px) {
         display: none;
     }
 `
