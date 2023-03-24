@@ -18,7 +18,7 @@ function App() {
     }
   }
 
-  const [ pageLoaded, setPageLoaded ] = useState(false)
+  const [ pageLoaded, setPageLoaded ] = useState(true)
 
   useEffect(() => {
     setTimeout(() => {
