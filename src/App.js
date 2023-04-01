@@ -1,4 +1,4 @@
-import { BrowserRouter as Router } from "react-router-dom";
+import { BrowserRouter as Router, Navigate, Route, Routes } from "react-router-dom";
 import { ThemeProvider } from "styled-components";
 import ScrollToTop from "./ScrollToTop";
 import AnimatedCursor from 'react-animated-cursor';
@@ -30,10 +30,7 @@ function App() {
 
   return (
     <Router>
-     { pageLoaded ? 
-      <ThemeProvider theme={theme}>
-      <ScrollToTop>
-        <AnimatedCursor 
+      <AnimatedCursor 
          innerSize={15}
          outerSize={25}
          color='255, 197, 173'
@@ -44,12 +41,20 @@ function App() {
            'a',
            'button',
            '.link' ]} />
-          <Home />
-      </ScrollToTop>
-    </ThemeProvider> : 
+      <ThemeProvider theme={theme}>
+      <ScrollToTop>
+     { pageLoaded ? 
+     <>
+      <Routes>
+        <Route path='/' element={<Home />} />
+        <Route path="*" element={<Navigate to='/' />} />
+      </Routes>
+    </> : 
     <>
       <Preloader />
     </>}
+    </ScrollToTop>
+    </ThemeProvider>
     </Router>
   );
 }
